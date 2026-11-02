@@ -189,7 +189,16 @@
   justify-content: space-between;
   min-height: 75px;
   padding: 10px 5%;
-  background: #ffffff;
+
+   background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.35),
+              0 4px 20px rgba(0, 0, 0, 0.035);
+
+  transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle {
@@ -398,7 +407,7 @@
 }
 
 .mobile-submenu a {
-  color: #697786;
+  color: #1a232c;
   font-size: 12px;
   text-decoration: none;
   padding: 9px 0;
@@ -487,12 +496,12 @@
 @media (max-width: 480px) {
   .mobile-navbar-top {
     min-height: 68px;
-    padding: 10px 4%;
+    padding: 2px 4%;
   }
 
   .mobile-navbar-top .brand-logo img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .mobile-navbar-top .brand-name {
@@ -539,8 +548,8 @@
   }
 
   .mobile-nav-link {
-    font-size: 11px;
-    padding: 6px 0;
+    font-size: 12px;
+    padding: 8px 0;
   }
 
   .mobile-nav-link svg {
