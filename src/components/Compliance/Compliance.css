@@ -1,0 +1,255 @@
+.compliance-page {
+  background: #fff;
+  color: #20252b;
+}
+
+.compliance-container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+/* Hero */
+
+.compliance-hero {
+  padding: 75px 0 65px;
+  background: linear-gradient(120deg, #fff8f4, #ffffff 75%);
+  border-bottom: 1px solid #f1eeec;
+}
+
+.compliance-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #fc4f06;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.compliance-hero h1 {
+  margin: 19px 0 12px;
+  font-size: clamp(36px, 5vw, 35px);
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+}
+
+.compliance-hero h1 span {
+  color: #fc4f06;
+}
+
+.compliance-hero p {
+  max-width: 570px;
+  margin: 0;
+  color: #1e2328;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Policy section */
+
+.compliance-content {
+  padding: 65px 0 85px;
+}
+
+.compliance-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.compliance-label,
+.compliance-officer-info > span {
+  color: #fc4f06;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.compliance-heading h2 {
+  margin: 8px 0 0;
+  font-size: 30px;
+  letter-spacing: -0.8px;
+}
+
+.compliance-count {
+  padding: 8px 13px;
+  color: #777;
+  background: #f7f7f7;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Policy cards */
+
+.compliance-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ededed;
+}
+
+.compliance-policy {
+  display: grid;
+  grid-template-columns: 46px 35px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 83px;
+  padding: 15px 18px;
+  border-bottom: 1px solid #ededed;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.25s ease, padding 0.25s ease;
+}
+
+.compliance-policy:hover {
+  padding-left: 24px;
+  background: #fff8f4;
+}
+
+.compliance-file-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fc4f06;
+  background: #fff0e9;
+  border-radius: 12px;
+}
+
+.compliance-number {
+  color: #a4a8ad;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.compliance-policy h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.compliance-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fc4f06;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+/* Grievance officer */
+
+.compliance-officer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 38px;
+  padding: 25px 28px;
+  background: #f8f9fa;
+  border: 1px solid #eef0f1;
+  border-radius: 15px;
+}
+
+.compliance-officer-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fc4f06;
+  background: #fff0e9;
+  border-radius: 12px;
+}
+
+.compliance-officer-info {
+  flex: 1;
+}
+
+.compliance-officer-info h3 {
+  margin: 5px 0 3px;
+  font-size: 18px;
+}
+
+.compliance-officer-info p {
+  margin: 0;
+  color: #161b1f;
+  font-size: 13px;
+}
+
+.compliance-officer > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fc4f06;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.compliance-officer > a:hover {
+  color: #d94100;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .compliance-hero {
+    padding: 55px 0 48px;
+  }
+
+  .compliance-content {
+    padding: 45px 0 60px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 25px;
+  }
+
+  .compliance-policy {
+    grid-template-columns: 42px 1fr auto;
+    gap: 12px;
+    padding: 14px 8px;
+  }
+
+  .compliance-number {
+    display: none;
+  }
+
+  .compliance-policy h3 {
+    font-size: 13px;
+  }
+
+  .compliance-file-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .compliance-officer {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .compliance-officer-info {
+    min-width: calc(100% - 70px);
+  }
+
+  .compliance-officer > a {
+    margin-left: 66px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compliance-policy {
+    transition: none;
+  }
+}

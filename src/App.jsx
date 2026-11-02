@@ -9,6 +9,10 @@ import Certificates from "./pages/Certificates";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import CompanyProfile from "./pages/CompanyProfile";
+import VisionMission from "./pages/VisionMission";
+import Compliance from "./pages/Compliance";
+import Customers from "./pages/Customers";
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
+         <Route path="/company-profile" element={<CompanyProfile />} />
+         <Route path="/vision-mission" element={<VisionMission/>} />
+         <Route path="/compliance" element={<Compliance/>} />
+         <Route path="/customers" element={<Customers/>} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
