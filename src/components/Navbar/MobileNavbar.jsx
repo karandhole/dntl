@@ -29,7 +29,7 @@ const MobileNavbar = () => {
                     <Link to="/" className="brand-logo">
                         <img
                             src="/images/logo-bg.png"
-                            alt="NextGen Global Exim"
+                            alt="Deepak Novochem"
                             onError={(e) => {
                                 e.currentTarget.style.display = "none";
                             }}
