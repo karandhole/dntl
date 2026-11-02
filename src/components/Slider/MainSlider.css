@@ -1,0 +1,530 @@
+
+/* =========================================
+   NEXTGEN GLOBAL EXIM - MAIN SLIDER
+   BRAND COLORS
+========================================= */
+ @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+  /* font-family:'Marcellus', serif; */
+:root {
+  --brand-blue: #0A6D97;
+  --brand-green: #5CBA3C;
+  --brand-yellow: #c05a00;
+  --white: #FFFFFF;
+  --dark-blue: #052637;
+}
+
+/* =========================================
+   MAIN SLIDER
+========================================= */
+
+.main-slider {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  min-height: 550px;
+  overflow: hidden;
+  background: var(--brand-blue);
+}
+
+/* =========================================
+   INDIVIDUAL SLIDES
+========================================= */
+
+.slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+/* =========================================
+   DARK BLUE IMAGE OVERLAY
+========================================= */
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 38, 55, 0.94) 0%,
+    rgba(10, 109, 151, 0.75) 48%,
+    rgba(10, 109, 151, 0.20) 100%
+  );
+}
+
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
+
+.slider-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+.slide-content {
+  max-width: 750px;
+  color: var(--white);
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease 0.3s,
+    transform 0.8s ease 0.3s;
+}
+
+.slide.active .slide-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   SUBTITLE / TAGLINE
+========================================= */
+
+.slide-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--brand-green);
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+.subtitle-line {
+  display: inline-block;
+
+  width: 40px;
+  height: 3px;
+
+  background: var(--brand-yellow);
+}
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.slide-content h1 {
+  color: var(--white);
+/* font-family: var(--font-body), "Open Sans", sans-serif; */
+  font-size: clamp(42px, 5.5vw, 50px);
+  font-weight: 800;
+font-family:'Marcellus', serif; 
+  line-height: 1.12;
+  letter-spacing: 1.5px;
+
+  margin: 0 0 22px;
+}
+
+.slide-content h1 span {
+  color: var(--brand-green);
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.slide-content p {
+  max-width: 590px;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+ letter-spacing: normal;
+  margin: 0 0 35px;
+}
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.slider-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 10px 20px;
+
+  background: var(--brand-green);
+  color: var(--white);
+
+  border: 2px solid var(--brand-green);
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.slider-contact-btn:hover {
+  background: var(--brand-yellow);
+  border-color: var(--brand-yellow);
+
+  color: var(--dark-blue);
+
+  transform: translateY(-3px);
+}
+
+.slider-contact-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.slider-contact-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   SLIDER NAVIGATION
+========================================= */
+
+.slider-navigation {
+  position: absolute;
+  z-index: 5;
+
+  bottom: 45px;
+  left: 8%;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* PREVIOUS / NEXT BUTTONS */
+
+.slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--white);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: var(--brand-green);
+  border-color: var(--brand-green);
+  color: var(--white);
+}
+
+.slider-arrow:focus-visible,
+.slider-dot:focus-visible {
+  outline: 2px solid var(--brand-yellow);
+  outline-offset: 4px;
+}
+
+/* SLIDER DOTS */
+
+.slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.slider-dot {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  width: 28px;
+
+  border-radius: 10px;
+
+  background: var(--brand-yellow);
+}
+
+/* =========================================
+   SLIDE COUNTER
+========================================= */
+
+.slider-counter {
+  position: absolute;
+  z-index: 5;
+
+  right: 8%;
+  bottom: 55px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.slider-counter span:first-child {
+  color: var(--brand-yellow);
+  font-size: 20px;
+}
+
+.counter-divider {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+  .main-slider {
+    height: 580px;
+    min-height: 500px;
+  }
+
+  .slider-container {
+    padding: 0 6%;
+  }
+
+  .slide-content {
+    max-width: 650px;
+  }
+
+  .slide-content h1 {
+    font-size: clamp(42px, 7vw, 35px);
+  }
+
+  .slider-navigation {
+    left: 6%;
+  }
+
+  .slider-counter {
+    right: 6%;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .main-slider {
+    height: 570px;
+    min-height: 500px;
+  }
+
+  .slide {
+    background-position: center;
+  }
+
+  .slide-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(5, 38, 55, 0.94) 0%,
+      rgba(10, 109, 151, 0.68) 100%
+    );
+  }
+
+  .slider-container {
+    padding: 0 7%;
+  }
+
+  /* TAGLINE */
+
+  .slide-subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+    gap: 8px;
+
+    margin-bottom: 20px;
+  }
+
+  .subtitle-line {
+    width: 25px;
+  }
+
+  /* HEADING */
+
+  .slide-content h1 {
+    font-size: clamp(37px, 10vw, 30px);
+
+    line-height: 1.15;
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+  }
+
+  /* DESCRIPTION */
+
+  .slide-content p {
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin-bottom: 27px;
+  }
+
+  /* CONTACT BUTTON */
+
+  .slider-contact-btn {
+    padding: 14px 21px;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  /* NAVIGATION */
+
+  .slider-navigation {
+    bottom: 25px;
+    left: 7%;
+
+    gap: 10px;
+  }
+
+  .slider-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .slider-dot.active {
+    width: 23px;
+  }
+
+  /* COUNTER */
+
+  .slider-counter {
+    bottom: 35px;
+    right: 7%;
+
+    font-size: 11px;
+    gap: 7px;
+  }
+
+  .slider-counter span:first-child {
+    font-size: 16px;
+  }
+
+  .counter-divider {
+    width: 20px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+  .main-slider {
+    height: 530px;
+    min-height: 480px;
+  }
+
+  .slider-container {
+    padding: 0 6%;
+  }
+
+  .slide-content h1 {
+    font-size: 25px;
+  }
+
+  .slide-subtitle {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .slide-content p {
+    font-size: 12px;
+  }
+
+  .slider-navigation {
+    left: 6%;
+    gap: 7px;
+  }
+
+  .slider-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .slider-counter {
+    right: 6%;
+    gap: 5px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .slide,
+  .slide-content,
+  .slider-contact-btn,
+  .slider-arrow,
+  .slider-dot {
+    transition: none;
+  }
+
+}

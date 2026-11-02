@@ -1,0 +1,596 @@
+
+/* =================================
+   MAIN HEADER
+================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.35),
+              0 4px 20px rgba(0, 0, 0, 0.035);
+
+  transition: all 0.3s ease;
+}
+
+/* =================================
+   BRAND LOGO
+================================= */
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo img {
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  color: #102d4f;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  line-height: 1.2;
+}
+
+.brand-name small {
+  color: #d35f00;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+/* =================================
+   DESKTOP NAVBAR
+================================= */
+
+.desktop-navbar {
+  display: block;
+}
+
+.navbar-container {
+  max-width: 1440px;
+  min-height: 88px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #27384a;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 35px 0;
+ 
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #d35f00;
+}
+
+/* =================================
+   DESKTOP DROPDOWN
+================================= */
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 270px;
+  padding: 12px;
+  background: #ffffff;
+  border-top: 3px solid #d35f00;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 12px;
+  color: #26384b;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-link:hover {
+  background: #f6f3eb;
+  color: #a77b25;
+  padding-left: 17px;
+}
+
+/* =================================
+   CTA BUTTON
+================================= */
+
+.navbar-cta,
+.mobile-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 19px;
+  background: #102d4f;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-cta:hover,
+.mobile-contact-btn:hover {
+  background: #d35f00;
+  color: #ffffff;
+}
+
+/* =================================
+   MOBILE HEADER
+================================= */
+
+.mobile-navbar {
+  display: none;
+}
+
+.mobile-navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 75px;
+  padding: 10px 5%;
+  background: #ffffff;
+}
+
+.mobile-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #102d4f;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* =================================
+   DARK OVERLAY
+================================= */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(5, 18, 32, 0.65);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =================================
+   LEFT SIDEBAR
+================================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 50%;
+  max-width: 420px;
+  min-width: 260px;
+
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  z-index: 1001;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 0;
+
+  box-shadow: 8px 0 35px rgba(0, 0, 0, 0.12);
+
+  transform: translateX(-100%);
+  visibility: hidden;
+
+  transition:
+    transform 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/* =================================
+   SIDEBAR LOGO HEADER
+================================= */
+
+.mobile-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 85px;
+  padding: 15px 18px;
+
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.mobile-sidebar-header .brand-logo {
+  gap: 8px;
+}
+
+.mobile-sidebar-header .brand-logo img {
+  width: 62px;
+  height: 62px;
+}
+
+.mobile-sidebar-header .brand-name {
+  font-size: 15px;
+}
+
+.mobile-sidebar-header .brand-name small {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+
+.sidebar-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: #f3f5f7;
+  color: #102d4f;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.sidebar-close:hover {
+  background: #102d4f;
+  color: #ffffff;
+}
+
+/* =================================
+   SIDEBAR DIVIDER
+================================= */
+
+.sidebar-divider {
+  height: 1px;
+  background: #e9edf0;
+  margin: 0 18px;
+  flex-shrink: 0;
+}
+
+/* =================================
+   SIDEBAR CONTENT
+================================= */
+
+.mobile-menu-content {
+  flex: 1;
+  padding: 20px 18px;
+}
+
+.sidebar-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #d35f00;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+/* =================================
+   NAVIGATION LINKS
+================================= */
+
+.mobile-nav-item {
+  border-bottom: 1px solid #edf0f2;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 16px 0;
+
+  background: none;
+  border: none;
+
+  color: #26384b;
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #d35f00;
+}
+
+/* =================================
+   PRODUCTS SUBMENU
+================================= */
+
+.mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 0 0 12px 12px;
+}
+
+.mobile-submenu a {
+  color: #697786;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 9px 0;
+  transition: color 0.2s ease;
+}
+
+.mobile-submenu a:hover {
+  color: #d35f00;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* =================================
+   SIDEBAR CONTACT BUTTON
+================================= */
+
+.mobile-contact-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px 10px;
+  font-size: 12px;
+}
+
+/* =================================
+   SIDEBAR FOOTER
+================================= */
+
+.mobile-sidebar-footer {
+  padding: 18px;
+  background: #f7f8fa;
+  border-top: 1px solid #e9edf0;
+  flex-shrink: 0;
+}
+
+.mobile-sidebar-footer p {
+  color: #697786;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1150px) {
+  .navbar-container {
+    padding: 0 3%;
+    gap: 18px;
+  }
+
+  .desktop-menu {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .navbar-cta {
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+/* =================================
+   MOBILE BREAKPOINT
+================================= */
+
+@media (max-width: 950px) {
+  .desktop-navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+  .mobile-navbar-top {
+    min-height: 68px;
+    padding: 10px 4%;
+  }
+
+  .mobile-navbar-top .brand-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mobile-navbar-top .brand-name {
+    font-size: 12px;
+  }
+
+  .mobile-menu {
+    width: 70%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .mobile-sidebar-header {
+    min-height: 75px;
+    padding: 12px 10px;
+    gap: 5px;
+  }
+
+  .mobile-sidebar-header .brand-logo {
+    gap: 5px;
+  }
+
+  .mobile-sidebar-header .brand-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mobile-sidebar-header .brand-name {
+    display: none;
+  }
+
+  .mobile-sidebar-header .brand-name small {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .sidebar-close {
+    width: 27px;
+    height: 27px;
+  }
+
+  .mobile-menu-content {
+    padding: 16px 10px;
+  }
+
+  .mobile-nav-link {
+    font-size: 11px;
+    padding: 6px 0;
+  }
+
+  .mobile-nav-link svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mobile-submenu {
+    padding-left: 7px;
+  }
+
+  .mobile-submenu a {
+    font-size: 10px;
+    line-height: 0.5;
+  }
+
+  .mobile-contact-btn {
+    font-size: 10px;
+    padding: 11px 5px;
+    gap: 4px;
+  }
+
+  .sidebar-label {
+    font-size: 9px;
+  }
+}
+
+/* =================================
+   EXTRA SMALL DEVICES
+================================= */
+
+@media (max-width: 350px) {
+  .mobile-sidebar-header .brand-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mobile-sidebar-header .brand-name {
+    font-size: 9px;
+  }
+
+  .mobile-sidebar-header .brand-name small {
+    font-size: 5px;
+  }
+
+  .mobile-sidebar-header {
+    padding: 10px 7px;
+  }
+
+  .mobile-menu-content {
+    padding: 12px 8px;
+  }
+}
