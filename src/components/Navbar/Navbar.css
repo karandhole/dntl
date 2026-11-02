@@ -188,7 +188,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 75px;
-  padding: 10px 5%;
+  padding: 1px 5%;
 
    background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(16px);
@@ -496,7 +496,7 @@
 @media (max-width: 480px) {
   .mobile-navbar-top {
     min-height: 68px;
-    padding: 2px 4%;
+    padding: 1px 4%;
   }
 
   .mobile-navbar-top .brand-logo img {
