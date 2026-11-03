@@ -44,7 +44,7 @@ export const navigation = [
     path: "/sustainability",
   },
   {
-    name: "Csr",
+    name: "CSR",
     path: "/csr",
   },
 

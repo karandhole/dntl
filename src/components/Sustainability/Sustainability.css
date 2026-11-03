@@ -1,0 +1,234 @@
+
+.sustainability-page {
+  width: 100%;
+  background: #ffffff;
+  color: #17233d;
+  overflow: hidden;
+}
+
+/* Common heading */
+
+.sustainability-heading,
+.certifications-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.sustainability-eyebrow {
+  display: inline-block;
+  color: #079b91;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.sustainability-heading h1,
+.certifications-heading h2 {
+  color: #151b45;
+  font-size: 35px;
+  font-weight: 750;
+  margin: 0 0 14px;
+}
+
+.sustainability-heading p,
+.certifications-heading p {
+  color: #383e4a;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* First section */
+
+.sustainability-section {
+  padding: 75px 7% 85px;
+  background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+}
+
+.sustainability-logo-grid {
+  max-width: 1120px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.sustainability-logo-card {
+  height: 175px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e8edf0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sustainability-logo-card:hover {
+  transform: translateY(-6px);
+  border-color: #0a9d92;
+  box-shadow: 0 12px 30px rgba(18, 48, 65, 0.08);
+}
+
+.sustainability-logo-card img {
+  max-width: 100%;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Certifications section */
+
+.certifications-section {
+  padding: 75px 7% 95px;
+  background: #ffffff;
+}
+
+.certifications-heading {
+  margin-bottom: 48px;
+}
+
+.certifications-grid {
+  max-width: 1120px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.certification-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-7px);
+  border-color: #079b91;
+  box-shadow: 0 16px 35px rgba(18, 48, 65, 0.10);
+}
+
+.certification-image {
+  height: 205px;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbfcfd;
+  overflow: hidden;
+}
+
+.certification-image img {
+  max-width: 100%;
+  max-height: 145px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.certification-card:hover .certification-image img {
+  transform: scale(1.06);
+}
+
+.certificate-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 29, 61, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-overlay span {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 11px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.certification-card:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.certification-info {
+  min-height: 78px;
+  padding: 18px 22px;
+  border-top: 1px solid #edf0f2;
+  border-bottom: 3px solid #079b91;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.certification-info h3 {
+  margin: 0;
+  color: #172b55;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.certificate-link {
+  color: #079b91;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .sustainability-section,
+  .certifications-section {
+    padding: 60px 5%;
+  }
+
+  .sustainability-logo-grid,
+  .certifications-grid {
+    gap: 18px;
+  }
+
+  .certification-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .sustainability-heading h1,
+  .certifications-heading h2 {
+    font-size: 29px;
+  }
+
+  .sustainability-logo-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sustainability-logo-card {
+    height: 145px;
+  }
+
+  .certification-image {
+    height: 190px;
+  }
+
+  .certification-info {
+    flex-direction: row;
+    align-items: center;
+  }
+}
