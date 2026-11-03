@@ -54,9 +54,9 @@ const CoreInitiatives = () => {
               <div className="initiative-card-overlay"></div>
 
               <div className="initiative-card-content">
-                <span className="initiative-number">
+                {/* <span className="initiative-number">
                   0{index + 1}
-                </span>
+                </span> */}
 
                 <h3>{item.title}</h3>
 
