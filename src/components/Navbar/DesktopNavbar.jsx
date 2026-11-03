@@ -50,6 +50,9 @@ const DesktopNavbar = () => {
                                             to={child.path}
                                             key={child.path}
                                             className="dropdown-link"
+                                            onClick={(e) => {
+                                                e.currentTarget.blur();
+                                            }}
                                         >
                                             {child.name}
                                             <ArrowUpRight size={14} />
