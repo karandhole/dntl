@@ -106,12 +106,12 @@
 .products-heading h2 {
   font-size: 34px;
   margin: 9px 0 0;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
   color: #173346;
 }
 
 .products-heading h2 em {
-  color: #709f99;
+  color: #568a84;
   font-style: normal;
 }
 
@@ -261,7 +261,7 @@
   }
 
   .products-heading h2 {
-    font-size: 29px;
+    font-size: 25px;
   }
 
   .products-heading p {
