@@ -50,7 +50,7 @@ export const navigation = [
 
   {
     name: "Career",
-    path: "/career",
+    path: "/careers",
   },
   {
     name: "Contact Us",
