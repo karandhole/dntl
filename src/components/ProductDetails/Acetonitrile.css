@@ -1,0 +1,960 @@
+
+/* =================================
+   ACETONITRILE PRODUCT PAGE
+================================= */
+
+.acetonitrile-page {
+  --aceto-orange: #fc4f06;
+  --aceto-dark: #202b36;
+  --aceto-muted: #23303c;
+  color: var(--aceto-dark);
+  background: #fff;
+  overflow: hidden;
+}
+
+.aceto-container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+/* =================================
+   BREADCRUMB
+================================= */
+
+.aceto-breadcrumb {
+  padding: 20px 0;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.aceto-breadcrumb .aceto-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #929aa2;
+}
+
+.aceto-breadcrumb a {
+  color: #737e88;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.aceto-breadcrumb a:hover,
+.aceto-breadcrumb span {
+  color: var(--aceto-orange);
+}
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.aceto-hero {
+  position: relative;
+  padding: 95px 0 105px;
+  background:
+    radial-gradient(circle at 80% 45%, rgba(252, 79, 6, 0.07), transparent 30%),
+    linear-gradient(120deg, #fff 35%, #fffaf7 100%);
+}
+
+.aceto-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.aceto-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--aceto-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.aceto-eyebrow-line {
+  width: 28px;
+  height: 2px;
+  background: var(--aceto-orange);
+}
+
+.aceto-hero h1 {
+  margin: 22px 0;
+ font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: #202b36;
+}
+
+
+
+.aceto-hero h1 span,
+.aceto-section-heading h2 span,
+.aceto-modal-header h2 span {
+  color: var(--aceto-orange);
+}
+
+.aceto-hero-description {
+  max-width: 520px;
+  color: var(--aceto-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.aceto-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 32px;
+}
+
+.aceto-hero-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #f0e9e5;
+  border-radius: 30px;
+  background: #fff;
+  color: #59636d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.aceto-hero-tags svg {
+  color: var(--aceto-orange);
+}
+
+.aceto-primary-btn,
+.aceto-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 23px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--aceto-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aceto-primary-btn:hover,
+.aceto-submit-btn:hover {
+  background: #df4300;
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(252, 79, 6, 0.2);
+}
+
+/* =================================
+   MOLECULAR VISUAL
+================================= */
+
+.aceto-hero-visual {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aceto-visual-orbit {
+  position: absolute;
+  border: 1px solid rgba(252, 79, 6, 0.13);
+  border-radius: 50%;
+}
+
+.aceto-orbit-one {
+  width: 390px;
+  height: 390px;
+}
+
+.aceto-orbit-two {
+  width: 310px;
+  height: 310px;
+  border-style: dashed;
+  animation: acetoRotate 35s linear infinite;
+}
+
+@keyframes acetoRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.aceto-molecule-card {
+  position: relative;
+  z-index: 2;
+  width: min(360px, 90%);
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 25px 70px rgba(37, 48, 59, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.aceto-molecule-top,
+.aceto-molecule-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.aceto-molecule-top {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0eeec;
+  color: #8a9299;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.aceto-molecule-top svg {
+  color: var(--aceto-orange);
+}
+
+.aceto-molecule-structure {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #263542;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.aceto-bond {
+  width: 35px;
+  height: 2px;
+  background: #263542;
+}
+
+.aceto-triple-bond {
+  position: relative;
+  width: 45px;
+  height: 2px;
+  background: #263542;
+}
+
+.aceto-triple-bond::before,
+.aceto-triple-bond::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #263542;
+  content: "";
+}
+
+.aceto-triple-bond::before {
+  top: -5px;
+}
+
+.aceto-triple-bond::after {
+  top: 5px;
+}
+
+.aceto-molecule-structure span:last-child {
+  color: var(--aceto-orange);
+}
+
+.aceto-molecule-bottom {
+  padding-top: 17px;
+  border-top: 1px solid #f0eeec;
+}
+
+.aceto-molecule-bottom span:first-child {
+  color: #263542;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.aceto-molecule-bottom span:last-child {
+  color: #a1a8ae;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.aceto-floating-icon {
+  position: absolute;
+  z-index: 3;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f3e9e3;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--aceto-orange);
+  box-shadow: 0 12px 30px rgba(37, 48, 59, 0.08);
+}
+
+.aceto-floating-one {
+  top: 55px;
+  right: 10px;
+}
+
+.aceto-floating-two {
+  bottom: 60px;
+  left: 8px;
+}
+
+.aceto-visual-caption {
+  position: absolute;
+  bottom: -12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #929aa2;
+  font-size: 11px;
+}
+
+.aceto-caption-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--aceto-orange);
+}
+
+/* =================================
+   PRODUCT SPECIFICATIONS
+================================= */
+
+.aceto-details-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.aceto-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 48px;
+}
+
+.aceto-section-heading h2 {
+  margin: 14px 0 0;
+  color: #202b36;
+  font-size: clamp(30px, 4vw, 35px);
+  letter-spacing: 1px;
+}
+
+.aceto-section-heading > p {
+  max-width: 340px;
+  margin: 0 0 5px;
+  color: var(--aceto-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.aceto-details-layout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.5fr;
+  gap: 35px;
+  align-items: stretch;
+}
+
+.aceto-details-intro {
+  padding: 35px;
+  border-radius: 10px;
+  background: #fff7f2;
+}
+
+.aceto-detail-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--aceto-orange);
+  box-shadow: 0 8px 22px rgba(252, 79, 6, 0.08);
+}
+
+.aceto-details-intro h3 {
+  margin: 27px 0 12px;
+  color: #263542;
+  font-size: 25px;
+}
+
+.aceto-details-intro > p {
+  color: var(--aceto-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.aceto-cas-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid #f0ded4;
+}
+
+.aceto-cas-highlight span {
+  color: #929aa2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.aceto-cas-highlight strong {
+  color: var(--aceto-orange);
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.aceto-specifications {
+  padding: 12px 30px;
+  border: 1px solid #edf0f2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.aceto-spec-row {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #f0f1f2;
+}
+
+.aceto-spec-row:last-child {
+  border-bottom: 0;
+}
+
+.aceto-spec-label {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: #1d2c3a;
+  font-size: 13px;
+}
+
+.aceto-spec-label span {
+  color: #c0c5ca;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.aceto-spec-row > strong {
+  color: #263542;
+  font-size: 14px;
+  text-align: right;
+}
+
+.aceto-spec-row .aceto-structure-value {
+  color: var(--aceto-orange);
+  letter-spacing: 1px;
+}
+
+/* =================================
+   ENQUIRY CTA
+================================= */
+
+.aceto-enquiry-section {
+  padding: 20px 0 100px;
+}
+
+.aceto-enquiry-card {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 55px 65px;
+  border-radius: 12px;
+  background: #202b36;
+  overflow: hidden;
+}
+
+.aceto-enquiry-content {
+  position: relative;
+  z-index: 2;
+}
+
+.aceto-enquiry-content > span {
+  color: #ff986e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.aceto-enquiry-content h2 {
+  margin: 17px 0 12px;
+  color: #fff;
+  font-size: clamp(25px, 3.5vw, 37px);
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.aceto-enquiry-content h2 em {
+  color: #ff895b;
+  font-style: normal;
+}
+
+.aceto-enquiry-content p {
+  max-width: 490px;
+  margin: 0;
+  color: #b7c0c8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.aceto-enquiry-btn {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--aceto-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aceto-enquiry-btn:hover {
+  background: #fff;
+  color: var(--aceto-orange);
+  transform: translateY(-3px);
+}
+
+.aceto-enquiry-decoration {
+  position: absolute;
+  right: 22%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.045);
+}
+
+/* =================================
+   COMPACT CENTERED ENQUIRY POPUP
+================================= */
+
+.aceto-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(430px, calc(100% - 28px));
+  max-width: none;
+  max-height: 75vh;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  overflow-y: auto;
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.2);
+}
+
+.aceto-dialog[open] {
+  display: block;
+}
+
+.aceto-dialog::backdrop {
+  background: rgba(16, 25, 34, 0.68);
+  backdrop-filter: blur(5px);
+}
+
+.aceto-modal {
+  padding: 20px 23px;
+}
+
+/* Popup Header */
+
+.aceto-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.aceto-modal-header h2 {
+  margin: 6px 0 4px;
+  color: #202b36;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.aceto-modal-header p {
+  margin: 0;
+  color: #7d8790;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.aceto-modal-close {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e9ecef;
+  border-radius: 50%;
+  background: #fff;
+  color: #59636d;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.aceto-modal-close:hover {
+  border-color: var(--aceto-orange);
+  background: var(--aceto-orange);
+  color: #fff;
+}
+
+/* Popup Form */
+
+.aceto-form {
+  padding-top: 13px;
+}
+
+.aceto-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 12px;
+}
+
+.aceto-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #34414d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.aceto-form label > span {
+  color: var(--aceto-orange);
+}
+
+.aceto-form input,
+.aceto-form textarea {
+  width: 100%;
+  border: 1px solid #e5e9ec;
+  border-radius: 5px;
+  outline: none;
+  background: #fbfcfd;
+  color: #263542;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.aceto-form input {
+  height: 34px;
+  padding: 7px 9px;
+}
+
+.aceto-form textarea {
+  height: 48px;
+  min-height: 48px;
+  padding: 7px 9px;
+  resize: vertical;
+}
+
+.aceto-form input:focus,
+.aceto-form textarea:focus {
+  border-color: var(--aceto-orange);
+  box-shadow: 0 0 0 3px rgba(252, 79, 6, 0.08);
+}
+
+.aceto-form input::placeholder,
+.aceto-form textarea::placeholder {
+  color: #a5adb4;
+}
+
+.aceto-form input[readonly] {
+  background: #fff7f2;
+  color: var(--aceto-orange);
+  font-weight: 700;
+}
+
+.aceto-full-field {
+  grid-column: 1 / -1;
+}
+
+/* Submit Button */
+
+.aceto-submit-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 16px;
+  font-size: 11px;
+}
+
+.aceto-form-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 0 0;
+  color: #929aa2;
+  font-size: 9px;
+}
+
+.aceto-form-note svg {
+  color: var(--aceto-orange);
+}
+
+/* Success Message */
+
+.aceto-success {
+  padding: 35px 10px 15px;
+  text-align: center;
+}
+
+.aceto-success > svg {
+  color: #28a66a;
+}
+
+.aceto-success h3 {
+  margin: 15px 0 8px;
+  color: #263542;
+  font-size: 21px;
+}
+
+.aceto-success p {
+  max-width: 350px;
+  margin: 0 auto 20px;
+  color: #7d8790;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+  .aceto-hero {
+    padding: 75px 0;
+  }
+
+  .aceto-hero-grid {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 25px;
+  }
+
+  .aceto-hero-visual {
+    min-height: 340px;
+  }
+
+  .aceto-orbit-one {
+    width: 310px;
+    height: 310px;
+  }
+
+  .aceto-orbit-two {
+    width: 250px;
+    height: 250px;
+  }
+
+  .aceto-molecule-card {
+    padding: 22px;
+  }
+
+  .aceto-details-layout {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+  }
+
+  .aceto-enquiry-card {
+    padding: 45px;
+  }
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 650px) {
+  .aceto-container {
+    width: 90%;
+  }
+
+  .aceto-hero {
+    padding: 65px 0 75px;
+  }
+
+  .aceto-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .aceto-hero h1 {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+  }
+
+  .aceto-hero-description {
+    font-size: 14px;
+  }
+
+  .aceto-hero-visual {
+    min-height: 330px;
+  }
+
+  .aceto-orbit-one {
+    width: 300px;
+    height: 300px;
+  }
+
+  .aceto-orbit-two {
+    width: 245px;
+    height: 245px;
+  }
+
+  .aceto-floating-one {
+    right: 2px;
+  }
+
+  .aceto-floating-two {
+    left: 2px;
+  }
+
+  .aceto-section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .aceto-section-heading > p {
+    margin-top: 13px;
+  }
+
+  .aceto-details-section {
+    padding: 70px 0;
+  }
+
+  .aceto-details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .aceto-details-intro {
+    padding: 27px;
+  }
+
+  .aceto-specifications {
+    padding: 8px 18px;
+  }
+
+  .aceto-spec-row {
+    min-height: 68px;
+  }
+
+  .aceto-spec-label {
+    gap: 9px;
+    font-size: 12px;
+  }
+
+  .aceto-spec-row > strong {
+    font-size: 12px;
+  }
+
+  .aceto-enquiry-section {
+    padding-bottom: 70px;
+  }
+
+  .aceto-enquiry-card {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 27px;
+    gap: 25px;
+  }
+
+  .aceto-enquiry-content h2 {
+    font-size: 28px;
+  }
+
+  .aceto-enquiry-decoration {
+    right: -35px;
+    top: 30%;
+  }
+
+  .aceto-modal {
+    padding: 18px 16px;
+  }
+
+  .aceto-modal-header h2 {
+    font-size: 19px;
+  }
+
+  .aceto-dialog {
+    width: calc(100% - 24px);
+    max-height: 85vh;
+  }
+
+  .aceto-form-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .aceto-full-field {
+    grid-column: auto;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 430px) {
+  .aceto-molecule-card {
+    width: 95%;
+    padding: 20px 16px;
+  }
+
+  .aceto-molecule-structure {
+    gap: 6px;
+    font-size: 23px;
+  }
+
+  .aceto-bond {
+    width: 25px;
+  }
+
+  .aceto-triple-bond {
+    width: 32px;
+  }
+
+  .aceto-molecule-bottom span:last-child {
+    font-size: 8px;
+  }
+
+  .aceto-spec-row {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding: 13px 0;
+  }
+
+  .aceto-spec-row > strong {
+    padding-left: 19px;
+    text-align: left;
+  }
+}

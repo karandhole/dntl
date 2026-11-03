@@ -13,6 +13,8 @@ import CompanyProfile from "./pages/CompanyProfile";
 import VisionMission from "./pages/VisionMission";
 import Compliance from "./pages/Compliance";
 import Customers from "./pages/Customers";
+import AcetonitrileProduct from "./pages/AcetonitrileProduct";
+import XylidineProduct from "./pages/XylidineProduct";
 
 function App() {
   return (
@@ -22,14 +24,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-         <Route path="/company-profile" element={<CompanyProfile />} />
-         <Route path="/vision-mission" element={<VisionMission/>} />
-         <Route path="/compliance" element={<Compliance/>} />
-         <Route path="/customers" element={<Customers/>} />
+        <Route path="/company-profile" element={<CompanyProfile />} />
+        <Route path="/vision-mission" element={<VisionMission />} />
+        <Route path="/compliance" element={<Compliance />} />
+        <Route path="/customers" element={<Customers />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
+
+        {/* Product Details */}
+        <Route path="/products/acetonitrile" element={<AcetonitrileProduct />} />
+        <Route path="/products/2-6-xylidine" element={<XylidineProduct />} />
       </Routes>
 
       <Footer />

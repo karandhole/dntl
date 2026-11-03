@@ -15,13 +15,13 @@ import "./Footer.css";
 
 const productColumns = [
     [
-        { name: "Acetonitrile", url: "/acetonitrile/" },
-        { name: "2,6 Xylidine", url: "/26-xylidine/" },
-        { name: "Ortho Cresol", url: "/ortho-cresol/" },
-        { name: "2,6 Xylenol", url: "/26-xylenol/" },
-        { name: "Valeronitrile", url: "/valeronitrile/" },
-        { name: "Methoxy Acetic Acid", url: "/methoxy-acetic-acid/" },
-        { name: "4 Methyl Cyclohexanone", url: "/4-methyl-cyclohexanone/" },
+        { name: "Acetonitrile", url: "/products/acetonitrile/" },
+        { name: "2,6 Xylidine", url: "/products/26-xylidine/" },
+        { name: "Ortho Cresol", url: "/products/ortho-cresol/" },
+        { name: "2,6 Xylenol", url: "/products/26-xylenol/" },
+        { name: "Valeronitrile", url: "/products/valeronitrile/" },
+        { name: "Methoxy Acetic Acid", url: "/products/methoxy-acetic-acid/" },
+        { name: "4 Methyl Cyclohexanone", url: "/products/4-methyl-cyclohexanone/" },
     ],
     [
         { name: "Tetramethyl Bisphenol F", url: "/tetramethyl-bisphenol-f/" },
