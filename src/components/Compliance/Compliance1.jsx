@@ -3,29 +3,37 @@ import { FileText, ArrowUpRight, ShieldCheck, Mail } from "lucide-react";
 import "./Compliance.css";
 
 const policies = [
+     {
+        title: "Corporate Social Responsibility Policy",
+        file: "images/compliance/CSR-policy.pdf",
+    },
+    {
+        title: "Ethics Human Rights and Labour Policy",
+        file: "images/compliance/Ethics-Human-Rights-Labour-Policy.pdf",
+    },
     {
         title: "Nomination and Remuneration Policy",
-        file: "images/compliance/CSR-policy.pdf",
+        file: "images/compliance/NRC-Policy.pdf",
     },
     {
         title: "Quality Management Policy",
-        file: "images/compliance/CSR-policy.pdf",
+        file: "images/compliance/Quality-Policy.pdf",
     },
     {
         title: "Customer Data Protection and Privacy Policy",
-        file:"images/compliance/CSR-policy.pdf",
+        file:"images/compliance/Customer-Data-Protection-Privacy-Policy_page.pdf",
     },
     {
         title: "Health, Safety & Environment Protection Policy",
-        file: "HSE-Policy-1.pdf",
+        file:"images/compliance/HSE-Policy-1.pdf",
     },
     {
         title: "Policy on Safety, Security and Prevention of Sexual Harassment",
-        file: "Posh-Policy.pdf",
+        file:"images/compliance/Posh-Policy.pdf",
     },
     {
         title: "Vigil Mechanism – Whistle Blower Policy",
-        file: "VIGIL-Mechanism-Whistle-Blower-Policy.pdf",
+        file:"images/compliance/VIGIL-Mechanism-Whistle-Blower-Policy.pdf",
     },
 ];
 
