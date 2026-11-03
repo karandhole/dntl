@@ -15,6 +15,7 @@ import Compliance from "./pages/Compliance";
 import Customers from "./pages/Customers";
 import AcetonitrileProduct from "./pages/AcetonitrileProduct";
 import XylidineProduct from "./pages/XylidineProduct";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/vision-mission" element={<VisionMission />} />
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/customers" element={<Customers />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
