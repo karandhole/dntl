@@ -18,6 +18,7 @@ import XylidineProduct from "./pages/XylidineProduct";
 import Products from "./pages/Products";
 import Applications from "./pages/Applications";
 import Sustainability from "./pages/Sustainability";
+import LifeAtDNTL from "./pages/LifeAtDNTL";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/sustainability" element={<Sustainability />} />
         <Route path="/applications" element={<Applications />} />
+         <Route path="/life-at-dntl" element={<LifeAtDNTL />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
 
