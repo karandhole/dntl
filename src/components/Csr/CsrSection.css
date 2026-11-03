@@ -1,0 +1,404 @@
+
+.csr-page {
+  background: #fff;
+  color: #17233d;
+  overflow: hidden;
+}
+
+.csr-eyebrow {
+  color: #079b91;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+}
+
+/* Hero */
+
+.csr-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 470px;
+  background: #f5f8fa;
+}
+
+.csr-hero-content {
+  padding: 75px 8% 75px 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.csr-hero-content h1 {
+  color: #151b45;
+  font-size: clamp(38px, 4.2vw, 35px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.csr-hero-content h1 span {
+  color: #079b91;
+}
+
+.csr-hero-content p {
+  color: #262e3a;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 450px;
+}
+
+.csr-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 14px 21px;
+  color: white;
+  background: #151b45;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.csr-hero-btn:hover {
+  background: #079b91;
+  transform: translateY(-3px);
+}
+
+.csr-hero-visual {
+  min-height: 470px;
+  position: relative;
+  background-image: url("/images/csr/csr-01.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.csr-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(13, 29, 61, .85),
+    transparent 75%
+  );
+}
+
+.csr-hero-caption {
+  position: absolute;
+  left: 38px;
+  bottom: 40px;
+  color: white;
+}
+
+.csr-hero-caption span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #8de0d6;
+}
+
+.csr-hero-caption h3 {
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+
+/* Commitment */
+
+.csr-commitment {
+  padding: 85px 12%;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 75px;
+}
+
+.csr-commitment-heading h2,
+.csr-impact-heading h2,
+.csr-initiatives-heading h2 {
+  color: #151b45;
+  font-size: 34px;
+  line-height: 1.3;
+  margin: 15px 0;
+}
+
+.csr-commitment-content p {
+  color: #687386;
+  font-size: 14px;
+  line-height: 1.95;
+  margin: 0 0 17px;
+}
+
+/* Community Impact */
+
+.csr-impact {
+  padding: 75px 9%;
+  background: #f5f8fa;
+}
+
+.csr-impact-heading,
+.csr-initiatives-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.csr-impact-heading p,
+.csr-initiatives-heading p {
+  color: #758092;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.csr-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.csr-impact-item {
+  background: #fff;
+  border: 1px solid #e8edf0;
+  border-radius: 7px;
+  padding: 27px 20px;
+  transition: .3s;
+}
+
+.csr-impact-item:hover {
+  transform: translateY(-5px);
+  border-color: #079b91;
+  box-shadow: 0 12px 28px rgba(20, 40, 65, .07);
+}
+
+.csr-impact-item svg {
+  color: #079b91;
+  width: 30px;
+  height: 30px;
+}
+
+.csr-impact-item h3 {
+  color: #172b55;
+  font-size: 15px;
+  margin: 18px 0 9px;
+}
+
+.csr-impact-item p {
+  color: #788291;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Initiatives */
+
+.csr-initiatives {
+  padding: 85px 8%;
+}
+
+.csr-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.csr-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 27px 25px 23px;
+  border: 1px solid #e6ebef;
+  border-radius: 8px;
+  background: #fff;
+  transition: .35s;
+}
+
+.csr-card:hover {
+  transform: translateY(-6px);
+  border-color: #079b91;
+  box-shadow: 0 15px 35px rgba(20, 40, 65, .08);
+}
+
+.csr-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.csr-card-number {
+  font-size: 30px;
+  font-weight: 800;
+  color: #dce8e9;
+}
+
+.csr-card-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: #079b91;
+  background: #e9f6f4;
+  border-radius: 7px;
+}
+
+.csr-card h3 {
+  color: #151b45;
+  font-size: 19px;
+  margin: 0 0 9px;
+  letter-spacing: .3px;
+}
+
+.csr-card h4 {
+  color: #079b91;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0 0 13px;
+}
+
+.csr-card-description {
+  color: #778292;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 66px;
+  margin: 0 0 14px;
+}
+
+.csr-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+.csr-card li {
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 11px;
+  color: #606d7c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.csr-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #079b91;
+}
+
+.csr-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f2;
+  color: #079b91;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 750;
+  transition: .3s;
+}
+
+.csr-read-more:hover {
+  color: #151b45;
+  gap: 15px;
+}
+
+/* Closing banner */
+
+.csr-footer-banner {
+  margin: 0 8% 75px;
+  padding: 55px 25px;
+  text-align: center;
+  color: #fff;
+  background: #151b45;
+  border-radius: 8px;
+}
+
+.csr-footer-banner span {
+  color: #8de0d6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.csr-footer-banner h2 {
+  font-size: 29px;
+  margin: 15px 0 10px;
+}
+
+.csr-footer-banner p {
+  color: #c1cada;
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .csr-commitment {
+    padding: 65px 8%;
+    gap: 35px;
+  }
+
+  .csr-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .csr-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .csr-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .csr-hero-content {
+    padding: 60px 7%;
+  }
+
+  .csr-hero-visual {
+    min-height: 300px;
+  }
+
+  .csr-commitment {
+    grid-template-columns: 1fr;
+    padding: 60px 7%;
+    gap: 20px;
+  }
+
+  .csr-impact,
+  .csr-initiatives {
+    padding: 60px 6%;
+  }
+
+  .csr-impact-grid,
+  .csr-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .csr-impact-heading h2,
+  .csr-initiatives-heading h2,
+  .csr-commitment-heading h2 {
+    font-size: 28px;
+  }
+
+  .csr-card-description {
+    min-height: auto;
+  }
+
+  .csr-footer-banner {
+    margin: 0 5% 50px;
+    padding: 40px 20px;
+  }
+
+  .csr-footer-banner h2 {
+    font-size: 23px;
+  }
+}

@@ -20,6 +20,7 @@ import Applications from "./pages/Applications";
 import Sustainability from "./pages/Sustainability";
 import LifeAtDNTL from "./pages/LifeAtDNTL";
 import Careers from "./pages/Careers";
+import CSR from "./pages/CSR";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/csr" element={<CSR />} />
 
         {/* Product Details */}
         <Route path="/products/acetonitrile" element={<AcetonitrileProduct />} />
