@@ -223,14 +223,7 @@ const CsrSection = () => {
         </div>
       </section>
 
-      {/* Closing Section */}
-      <section className="csr-footer-banner">
-        <span>OUR PURPOSE. OUR RESPONSIBILITY.</span>
-        <h2>Together, we can build a better tomorrow.</h2>
-        <p>
-          Creating lasting value for people, communities and the environment.
-        </p>
-      </section>
+     
 
     </main>
   );

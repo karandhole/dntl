@@ -6,7 +6,7 @@
 }
 
 .csr-eyebrow {
-  color: #079b91;
+  color: #c05a00;
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 2px;
@@ -38,7 +38,7 @@
 }
 
 .csr-hero-content h1 span {
-  color: #079b91;
+  color: #c05a00;
 }
 
 .csr-hero-content p {
@@ -64,7 +64,7 @@
 }
 
 .csr-hero-btn:hover {
-  background: #079b91;
+  background: #c05a00;
   transform: translateY(-3px);
 }
 
@@ -167,12 +167,12 @@
 
 .csr-impact-item:hover {
   transform: translateY(-5px);
-  border-color: #079b91;
+  border-color: #c05a00;
   box-shadow: 0 12px 28px rgba(20, 40, 65, .07);
 }
 
 .csr-impact-item svg {
-  color: #079b91;
+  color: #c05a00;
   width: 30px;
   height: 30px;
 }
@@ -215,7 +215,7 @@
 
 .csr-card:hover {
   transform: translateY(-6px);
-  border-color: #079b91;
+  border-color: #c05a00;
   box-shadow: 0 15px 35px rgba(20, 40, 65, .08);
 }
 
@@ -237,7 +237,7 @@
   height: 48px;
   display: grid;
   place-items: center;
-  color: #079b91;
+  color: #c05a00;
   background: #e9f6f4;
   border-radius: 7px;
 }
@@ -250,7 +250,7 @@
 }
 
 .csr-card h4 {
-  color: #079b91;
+  color: #c05a00;
   font-size: 12px;
   line-height: 1.6;
   margin: 0 0 13px;
@@ -287,7 +287,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #079b91;
+  background: #c05a00;
 }
 
 .csr-read-more {
@@ -297,7 +297,7 @@
   margin-top: auto;
   padding-top: 17px;
   border-top: 1px solid #edf0f2;
-  color: #079b91;
+  color: #c05a00;
   text-decoration: none;
   font-size: 12px;
   font-weight: 750;
