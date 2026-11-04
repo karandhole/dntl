@@ -21,10 +21,13 @@ import Sustainability from "./pages/Sustainability";
 import LifeAtDNTL from "./pages/LifeAtDNTL";
 import Careers from "./pages/Careers";
 import CSR from "./pages/CSR";
+import DeepSamruddhi from "./pages/DeepSamruddhi";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Navbar />
 
       <Routes>
@@ -44,6 +47,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/csr" element={<CSR />} />
+        <Route path="/csr/deep-samruddhi" element={<DeepSamruddhi />} />
 
         {/* Product Details */}
         <Route path="/products/acetonitrile" element={<AcetonitrileProduct />} />

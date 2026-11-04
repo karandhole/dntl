@@ -295,13 +295,23 @@
   align-items: center;
   gap: 10px;
   margin-top: auto;
-  padding-top: 17px;
+  padding: 17px 0 0;
+
+  width: 100%;
+  border: none;
   border-top: 1px solid #edf0f2;
+  border-radius: 0;
+  background: transparent;
+
   color: #c05a00;
-  text-decoration: none;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 750;
-  transition: .3s;
+  text-decoration: none;
+  text-align: left;
+
+  cursor: pointer;
+  transition: color 0.3s ease, gap 0.3s ease;
 }
 
 .csr-read-more:hover {
@@ -309,6 +319,10 @@
   gap: 15px;
 }
 
+.csr-read-more:focus-visible {
+  outline: 2px solid #c05a00;
+  outline-offset: 4px;
+}
 /* Closing banner */
 
 .csr-footer-banner {

@@ -60,6 +60,7 @@
   isolation: isolate;
   text-decoration: none;
   background: #333;
+  cursor: pointer;
 }
 
 .initiative-card::before {
