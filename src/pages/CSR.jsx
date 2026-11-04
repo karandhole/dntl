@@ -3,6 +3,7 @@ import CsrSection from '../components/Csr/CsrSection'
 import CoreInitiatives from '../components/Csr/CoreInitiatives'
 import CSRImpact from '../components/Csr/CSRImpact'
 import FocusAreas from '../components/Csr/FocusAreas'
+import Acknowledgments from '../components/Csr/Acknowledgments'
 
 const CSR = () => {
   return (
@@ -11,6 +12,7 @@ const CSR = () => {
         <CoreInitiatives/>
         <CSRImpact/>
         <FocusAreas/>
+        <Acknowledgments/>
     </main>
   )
 }
