@@ -31,7 +31,7 @@ const initiatives = [
             "Linking 90%+ households to government schemes",
             "Jan Suvidha Kendra for doorstep assistance",
         ],
-        path: "/csr/deep-samruddhi",
+        path: "#",
         icon: Users,
     },
     {
@@ -45,7 +45,7 @@ const initiatives = [
             "Improving neonatal mortality rates",
             "Financial assistance for BPL patients with acute illnesses",
         ],
-        path: "/csr/deep-samruddhi",
+        path: "/csr/deep-jyoti",
         icon: HeartPulse,
     },
     {
@@ -59,7 +59,7 @@ const initiatives = [
             "Interactive digital classrooms",
             "Infrastructure facilities at schools",
         ],
-        path: "/csr/deep-samruddhi",
+        path: "/csr/deep-gyan",
         icon: GraduationCap,
     },
     {
@@ -73,7 +73,7 @@ const initiatives = [
             "Laptops and computers for girl students",
             "Supporting education and empowerment",
         ],
-        path: "/csr/deep-samruddhi",
+        path: "/csr/deep-kanya",
         icon: Users,
     },
 ];

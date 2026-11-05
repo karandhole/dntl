@@ -1,0 +1,157 @@
+
+
+.deep-gyan-activities {
+  padding: 50px 0;
+  background: #f6f7f8;
+}
+
+.dga-container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+.dga-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dga-heading > span {
+  color: #fc4f06;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dga-heading h2 {
+  color: #202b36;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.dga-heading-line {
+  width: 45px;
+  height: 3px;
+  background: #fc4f06;
+  margin: 12px auto;
+}
+
+.dga-heading p {
+  color: #1f2b38;
+  font-size: 14px;
+  margin: 0;
+}
+
+.dga-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.dga-card {
+  position: relative;
+  background: #fff;
+  padding: 24px 20px 28px;
+  border: 1px solid #eceff1;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.dga-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(32, 43, 54, 0.08);
+  border-color: #f9c3aa;
+}
+
+.dga-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.dga-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: #fc4f06;
+  background: #fff1e9;
+  border-radius: 8px;
+}
+
+.dga-card-top > span {
+  color: #d5d9dd;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.dga-card h3 {
+  color: #202b36;
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+
+.dga-card > p {
+  color: #212d3b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.dga-amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 17px;
+}
+
+.dga-amenities div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #505963;
+  font-size: 12px;
+}
+
+.dga-amenities svg {
+  color: #fc4f06;
+  flex-shrink: 0;
+}
+
+.dga-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: #fc4f06;
+  transition: width 0.3s ease;
+}
+
+.dga-card:hover .dga-bottom-line {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .dga-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .deep-gyan-activities {
+    padding: 38px 0;
+  }
+
+  .dga-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dga-heading h2 {
+    font-size: 27px;
+  }
+}

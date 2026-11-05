@@ -1,0 +1,137 @@
+
+
+.deep-kanya-activities {
+  padding: 50px 0;
+  background: #f6f7f8;
+}
+
+.dka-container {
+  width: min(1150px, 92%);
+  margin: auto;
+}
+
+.dka-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dka-heading span {
+  color: #fc4f06;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dka-heading h2 {
+  color: #202b36;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.dka-line {
+  width: 45px;
+  height: 3px;
+  background: #fc4f06;
+  margin: 12px auto;
+}
+
+.dka-heading p {
+  color: #161a1e;
+  font-size: 14px;
+  margin: 0;
+}
+
+.dka-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dka-card {
+  position: relative;
+  padding: 26px 24px 30px;
+  background: #fff;
+  border: 1px solid #eceff1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.dka-card:hover {
+  transform: translateY(-5px);
+  border-color: #f9c3aa;
+  box-shadow: 0 12px 28px rgba(32, 43, 54, 0.08);
+}
+
+.dka-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dka-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  color: #fc4f06;
+  background: #fff1e9;
+  border-radius: 9px;
+}
+
+.dka-card-top span {
+  color: #d5d9dd;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.dka-card h3 {
+  color: #202b36;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.dka-card p {
+  color: #1f2833;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.dka-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fc4f06;
+  transition: width 0.3s ease;
+}
+
+.dka-card:hover .dka-bottom-line {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .dka-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .deep-kanya-activities {
+    padding: 38px 0;
+  }
+
+  .dka-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dka-heading h2 {
+    font-size: 27px;
+  }
+}

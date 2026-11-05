@@ -24,6 +24,8 @@ import CSR from "./pages/CSR";
 import DeepSamruddhi from "./pages/DeepSamruddhi";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DeepJyoti from "./pages/DeepJyoti";
+import DeepGyan from "./pages/DeepGyan";
+import DeepKanya from "./pages/DeepKanya";
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
         <Route path="/csr" element={<CSR />} />
         <Route path="/csr/deep-samruddhi" element={<DeepSamruddhi />} />
         <Route path="/csr/deep-jyoti" element={<DeepJyoti />} />
+        <Route path="/csr/deep-gyan" element={<DeepGyan />} />
+        <Route path="/csr/deep-kanya" element={<DeepKanya />} />
 
         {/* Product Details */}
         <Route path="/products/acetonitrile" element={<AcetonitrileProduct />} />
