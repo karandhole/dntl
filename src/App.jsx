@@ -23,6 +23,7 @@ import Careers from "./pages/Careers";
 import CSR from "./pages/CSR";
 import DeepSamruddhi from "./pages/DeepSamruddhi";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import DeepJyoti from "./pages/DeepJyoti";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/csr" element={<CSR />} />
         <Route path="/csr/deep-samruddhi" element={<DeepSamruddhi />} />
+        <Route path="/csr/deep-jyoti" element={<DeepJyoti />} />
 
         {/* Product Details */}
         <Route path="/products/acetonitrile" element={<AcetonitrileProduct />} />
