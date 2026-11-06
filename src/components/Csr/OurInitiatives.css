@@ -25,16 +25,16 @@
   display: inline-block;
   color: #fc4f06;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2.5px;
   margin-bottom: 8px;
 }
 
 .initiatives-heading h2 {
   color: #202b36;
-  font-size: clamp(28px, 3vw, 38px);
-  font-weight: 800;
-  letter-spacing: -0.8px;
+  font-size: clamp(28px, 3vw, 35px);
+  font-weight: 700;
+  letter-spacing: 0.8px;
   margin: 5px 0 15px;
 }
 
@@ -138,7 +138,7 @@
 
 .initiative-overlay h3 {
   font-size: 19px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.7px;
   margin: 0 0 8px;
 
@@ -154,7 +154,7 @@
 .initiative-overlay p {
   font-size: 13px;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.88);
   margin: 0 0 17px;
 }
