@@ -1,0 +1,585 @@
+
+:root {
+  --brand-blue: #26384b;
+  --brand-yellow: #d35f00;
+  --brand-green: #5CBA3C;
+  --text-color: #26384b;
+  --white: #FFFFFF;
+  --light-bg: #fffaf5;
+  --border-color: #f0e3d7;
+}
+
+/* =================================
+   MAIN SECTION
+================================= */
+
+.water-projects-section {
+  padding: 90px 20px;
+  background: var(--light-bg);
+  font-family: inherit;
+}
+
+.water-projects-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.water-projects-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.water-projects-heading > span {
+  display: inline-block;
+  color: var(--brand-yellow);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.water-projects-heading h2 {
+  font-size: 35px;
+  color: var(--brand-blue);
+  margin: 14px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.water-heading-line {
+  width: 65px;
+  height: 4px;
+  background: var(--brand-yellow);
+  margin: 18px auto;
+  border-radius: 10px;
+}
+
+.water-projects-heading p {
+  color: #212c37;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* =================================
+   MAIN LAYOUT
+================================= */
+
+.water-projects-content {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 35px;
+  align-items: start;
+}
+
+/* =================================
+   LEFT SIDEBAR
+================================= */
+
+.water-projects-sidebar {
+  background: var(--white);
+  padding: 30px 23px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 40px rgba(38, 56, 75, 0.06);
+}
+
+.water-sidebar-heading {
+  margin-bottom: 25px;
+}
+
+.water-sidebar-label {
+  color: var(--brand-yellow);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.water-projects-sidebar h3 {
+  font-size: 22px;
+  color: var(--brand-blue);
+  margin: 9px 0 6px;
+  font-weight: 700;
+}
+
+.water-sidebar-heading p {
+  font-size: 12px;
+  color: #89919a;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* PROJECT TABS */
+
+.water-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.water-project-tab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 10px;
+  border: 1px solid #eee9e3;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text-color);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.water-tab-number {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--brand-yellow);
+  min-width: 22px;
+}
+
+.water-tab-title {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.water-tab-arrow {
+  font-size: 20px;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.water-project-tab:hover,
+.water-project-tab.active {
+  background: var(--brand-yellow);
+  border-color: var(--brand-yellow);
+  color: var(--white);
+  box-shadow: 0 7px 20px rgba(211, 95, 0, 0.20);
+  transform: translateX(3px);
+}
+
+.water-project-tab:hover .water-tab-number,
+.water-project-tab.active .water-tab-number {
+  color: var(--white);
+}
+
+.water-project-tab:hover .water-tab-arrow,
+.water-project-tab.active .water-tab-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--white);
+}
+
+/* SIDEBAR FOOTER */
+
+.water-sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #f0e8df;
+}
+
+.water-sidebar-footer-line {
+  width: 25px;
+  height: 3px;
+  background: var(--brand-yellow);
+  border-radius: 10px;
+}
+
+.water-sidebar-footer span:last-child {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #929aa2;
+}
+
+/* =================================
+   RIGHT GALLERY
+================================= */
+
+.water-projects-gallery {
+  min-width: 0;
+  background: var(--white);
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(38, 56, 75, 0.06);
+}
+
+.water-gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.water-gallery-subtitle {
+  color: var(--brand-yellow);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.water-gallery-header h3 {
+  font-size: 25px;
+  color: var(--brand-blue);
+  margin: 8px 0 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.water-image-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand-yellow);
+  font-size: 13px;
+  font-weight: 750;
+  white-space: nowrap;
+  background: #fff4e9;
+  padding: 8px 12px;
+  border-radius: 30px;
+}
+
+.water-count-divider {
+  color: #c5a88e;
+}
+
+/* =================================
+   SWIPER IMAGE SLIDER
+================================= */
+
+.water-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #f3eee8;
+}
+
+.water-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.water-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* IMAGE WRAPPER */
+
+.water-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f3eee8;
+}
+
+/* PROJECT IMAGE */
+
+.water-slider-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+.water-slider-image.is-loading {
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+.water-slider-image.is-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =================================
+   SIMPLE CIRCULAR LOADER
+================================= */
+
+.water-image-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3eee8;
+}
+
+.water-loader-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #ead9c9;
+  border-top-color: var(--brand-yellow);
+  border-right-color: var(--brand-yellow);
+  border-radius: 50%;
+  animation: waterSpin 0.8s linear infinite;
+}
+
+@keyframes waterSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================
+   IMAGE ERROR
+================================= */
+
+.water-image-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffaf5;
+}
+
+.water-image-error span {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff0e3;
+  color: var(--brand-yellow);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* =================================
+   SLIDER NAVIGATION
+================================= */
+
+.water-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  color: var(--brand-yellow);
+  font-size: 19px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.water-slider-arrow:hover {
+  background: var(--brand-yellow);
+  color: var(--white);
+  border-color: var(--brand-yellow);
+}
+
+.water-prev {
+  left: 18px;
+}
+
+.water-next {
+  right: 18px;
+}
+
+/* =================================
+   SLIDER FOOTER
+================================= */
+
+.water-slider-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  gap: 15px;
+}
+
+.water-slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.water-dot {
+  width: 9px;
+  height: 9px;
+  border: none;
+  padding: 0;
+  border-radius: 20px;
+  background: #dedbd6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.water-dot.active {
+  width: 30px;
+  background: var(--brand-yellow);
+}
+
+.water-slider-caption {
+  color: #697581;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+  .water-projects-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .water-projects-sidebar {
+    padding: 25px;
+  }
+
+  .water-project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .water-project-tab:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .water-slider {
+    height: 340px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+  .water-projects-section {
+    padding: 55px 14px;
+  }
+
+  .water-projects-heading {
+    margin-bottom: 35px;
+  }
+
+  .water-projects-heading > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .water-projects-heading h2 {
+    font-size: 29px;
+  }
+
+  .water-projects-heading p {
+    font-size: 14px;
+  }
+
+  .water-projects-sidebar {
+    padding: 20px 15px;
+  }
+
+  .water-project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .water-project-tab:last-child {
+    grid-column: auto;
+  }
+
+  .water-project-tab {
+    padding: 14px 11px;
+  }
+
+  .water-projects-gallery {
+    padding: 15px;
+    border-radius: 13px;
+  }
+
+  .water-gallery-header {
+    gap: 8px;
+  }
+
+  .water-gallery-header h3 {
+    font-size: 19px;
+  }
+
+  .water-gallery-subtitle {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .water-image-count {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .water-slider {
+    height: 260px;
+    border-radius: 10px;
+  }
+
+  .water-slider-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .water-prev {
+    left: 10px;
+  }
+
+  .water-next {
+    right: 10px;
+  }
+
+  .water-slider-caption {
+    font-size: 11px;
+  }
+
+  .water-loader-spinner {
+    width: 38px;
+    height: 38px;
+    border-width: 3px;
+  }
+}
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .water-loader-spinner {
+    animation: none;
+  }
+
+  .water-slider-image,
+  .water-project-tab,
+  .water-slider-arrow,
+  .water-dot {
+    transition: none;
+  }
+}
