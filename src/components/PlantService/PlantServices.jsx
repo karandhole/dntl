@@ -16,7 +16,7 @@ const services = [
     title: "Contract Manufacturing",
     description:
       "We encourage outsourcing and contract manufacturing based on our vapour phase reaction technology, offering customized manufacturing services to meet diverse industrial requirements.",
-    link: "/contact-manufacturing",
+    link: "#",
     icon: Cog,
     label: "CUSTOMIZED MANUFACTURING",
   },
@@ -25,7 +25,7 @@ const services = [
     title: "R&D and Technical Support",
     description:
       "DNTL supports new product development and encourages innovative ideas. We also provide customized products from our existing product range and explore new molecule development.",
-    link: "/research-development",
+    link: "#",
     icon: Microscope,
     label: "INNOVATION & DEVELOPMENT",
   },
