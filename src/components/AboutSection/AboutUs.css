@@ -195,8 +195,8 @@
 
 .about-logo-list img {
     width: auto;
-    max-width: 120px;
-    height: 80px;
+    max-width: 150px;
+    height: 150px;
     object-fit: contain;
     filter: grayscale(0%);
     opacity: 1;
@@ -280,9 +280,20 @@
     }
 
     .about-logo-list {
-        gap: 25px;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+}
+
+.about-logo-list img {
+    width: auto;
+    max-width: 130px;
+    height: 80px;
+    object-fit: contain;
+}
 }
 
 @media (max-width: 480px) {
@@ -301,5 +312,16 @@
     .about-logo-list img {
         max-width: 80px;
         height: 38px;
+    }
+}
+@media (max-width: 480px) {
+    .about-logo-list {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .about-logo-list img {
+        max-width: 120px;
+        height: 90px;
     }
 }
