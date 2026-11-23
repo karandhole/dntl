@@ -101,14 +101,14 @@ const AboutSection = () => {
                             />
 
                             <img
-                                src="/images/about/logo01.jpg"
+                                src="/images/about/logo3.png"
                                 alt="Association Logo 2"
                             />
-
-                            <img
+                             <h3 style={{color:"green"}}>ZERO LIQUID DISCHARGE</h3>
+                            {/* <img
                                 src="/images/about/logo03.png"
                                 alt="Association Logo 3"
-                            />
+                            /> */}
                         </div>
                     </div>
 
