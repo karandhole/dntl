@@ -523,9 +523,37 @@
         min-width: 0 !important;
         max-width: 320px !important;
     }
+    
 }
 
+.mobile-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.sidebar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.sidebar-tagline {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #0a0a09;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.sidebar-brand-logo img {
+    display: block;
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+}
 
 /* ==========================================
    MINIMAL PREMIUM MOBILE SIDEBAR

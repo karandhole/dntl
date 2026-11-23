@@ -54,16 +54,22 @@ const MobileNavbar = () => {
                 {/* Logo Header */}
                 <div className="mobile-sidebar-header">
 
-                    <Link
-                        to="/"
-                        className="sidebar-brand-logo"
-                        onClick={closeMenu}
-                    >
-                        <img
-                            src="/images/logo2.png"
-                            alt="Deepak Novochem"
-                        />
-                    </Link>
+                    <div className="sidebar-brand">
+                        <span className="sidebar-tagline">
+                            A Responsible Care Company
+                        </span>
+
+                        <Link
+                            to="/"
+                            className="sidebar-brand-logo"
+                            onClick={closeMenu}
+                        >
+                            <img
+                                src="/images/logo2.png"
+                                alt="Deepak Novochem"
+                            />
+                        </Link>
+                    </div>
 
                     <button
                         className="sidebar-close"
@@ -131,7 +137,7 @@ const MobileNavbar = () => {
 
                     ))}
 
-                  
+
                 </nav>
 
             </aside>
