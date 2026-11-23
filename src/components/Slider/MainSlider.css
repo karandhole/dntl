@@ -421,6 +421,20 @@
   }
 }
 
+
+@media (max-width: 600px) {
+  .main-slider {
+    height: 570px;
+    min-height: 500px;
+    overflow: hidden;
+  }
+
+  .slider-background {
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
 /* =========================================
    REDUCED MOTION ACCESSIBILITY
 ========================================= */

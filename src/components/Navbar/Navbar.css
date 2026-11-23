@@ -355,8 +355,8 @@
     }
 
     .mobile-navbar-top .brand-logo img {
-        width: 115px;
-        height: 85px;
+        width: 100px;
+        height: 100px;
         object-fit: contain;
         transition: all 0.35s ease;
     }
@@ -402,8 +402,8 @@
 
     /* Smaller logo after scrolling */
     .site-header.scrolled .mobile-navbar-top .brand-logo img {
-        width: 95px;
-        height: 70px;
+        width: auto;
+        height: 100px;
     }
 
     /* Hamburger becomes dark */
@@ -505,8 +505,8 @@
     }
 
     .mobile-navbar-top .brand-logo img {
-        width: 100px;
-        height: 75px;
+        width: auto;
+        height: 100px;
     }
 
     .site-header.scrolled .mobile-navbar-top {
@@ -514,8 +514,8 @@
     }
 
     .site-header.scrolled .mobile-navbar-top .brand-logo img {
-        width: 85px;
-        height: 65px;
+        width: auto;
+        height: 100px;
     }
 
     .mobile-menu {
