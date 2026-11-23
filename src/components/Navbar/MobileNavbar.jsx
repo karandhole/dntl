@@ -22,64 +22,47 @@ const MobileNavbar = () => {
     return (
         <div className="mobile-navbar">
 
-            {/* Normal Mobile Header */}
-            {!menuOpen && (
-                <div className="mobile-navbar-top">
+            {/* Mobile Header */}
+            <div className="mobile-navbar-top">
 
-                    <Link to="/" className="brand-logo">
-                        <img
-                            src="/images/logo-bg.png"
-                            alt="Deepak Novochem"
-                            onError={(e) => {
-                                e.currentTarget.style.display = "none";
-                            }}
-                        />
+                <Link to="/" className="brand-logo">
+                    <img
+                        src="/images/deepak-logo.png"
+                        alt="Deepak Novochem"
+                    />
+                </Link>
 
-                       
-                    </Link>
+                <button
+                    className="mobile-menu-toggle"
+                    onClick={() => setMenuOpen(true)}
+                    aria-label="Open menu"
+                >
+                    <Menu size={27} />
+                </button>
 
-                    <button
-                        className="mobile-menu-toggle"
-                        onClick={() => setMenuOpen(true)}
-                        aria-label="Open menu"
-                    >
-                        <Menu size={27} />
-                    </button>
+            </div>
 
-                </div>
-            )}
+            {/* Overlay */}
+            <div
+                className={`mobile-overlay ${menuOpen ? "show" : ""}`}
+                onClick={closeMenu}
+            />
 
-            {/* Dark Overlay */}
-            {menuOpen && (
-                <div
-                    className="mobile-overlay"
-                    onClick={closeMenu}
-                />
-            )}
-
-            {/* Left Full Height Sidebar */}
+            {/* Sidebar */}
             <aside className={`mobile-menu ${menuOpen ? "open" : ""}`}>
 
-                {/* Sidebar Header With Logo */}
+                {/* Logo Header */}
                 <div className="mobile-sidebar-header">
 
                     <Link
                         to="/"
-                        className="brand-logo"
+                        className="sidebar-brand-logo"
                         onClick={closeMenu}
                     >
                         <img
-                            src="/images/logo-bg.png"
-                            alt="NextGen Global Exim"
-                            onError={(e) => {
-                                e.currentTarget.style.display = "none";
-                            }}
+                            src="/images/logo2.png"
+                            alt="Deepak Novochem"
                         />
-
-                        <span className="brand-name">
-                         Deepak
-                            <small>Novochem</small>
-                        </span>
                     </Link>
 
                     <button
@@ -87,19 +70,16 @@ const MobileNavbar = () => {
                         onClick={closeMenu}
                         aria-label="Close menu"
                     >
-                        <X size={24} />
+                        <X size={22} />
                     </button>
 
                 </div>
 
-                <div className="sidebar-divider" />
-
                 {/* Navigation */}
-                <div className="mobile-menu-content">
-
-                    <p className="sidebar-label">MAIN MENU</p>
+                <nav className="mobile-menu-content">
 
                     {navigation.map((item) => (
+
                         <div className="mobile-nav-item" key={item.name}>
 
                             {item.children ? (
@@ -130,6 +110,7 @@ const MobileNavbar = () => {
                                                     onClick={closeMenu}
                                                 >
                                                     {child.name}
+                                                    <ArrowUpRight size={14} />
                                                 </Link>
                                             ))}
                                         </div>
@@ -147,23 +128,11 @@ const MobileNavbar = () => {
                             )}
 
                         </div>
+
                     ))}
 
-                    <Link
-                        to="/contact"
-                        className="mobile-contact-btn"
-                        onClick={closeMenu}
-                    >
-                        Get In Touch
-                        <ArrowUpRight size={18} />
-                    </Link>
-
-                </div>
-
-                {/* Sidebar Footer */}
-                <div className="mobile-sidebar-footer">
-                    <p>Connecting Businesses Globally.</p>
-                </div>
+                  
+                </nav>
 
             </aside>
 

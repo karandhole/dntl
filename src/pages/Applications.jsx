@@ -1,11 +1,15 @@
 import React from 'react'
 import ApplicationsPage from '../components/Applications/ApplicationsPage'
+import BreadcrumbBanner from '../components/common/BreadcrumbBanner'
 
 const Applications = () => {
   return (
-   <main>
-    <ApplicationsPage/>
-   </main>
+    <main>
+      <BreadcrumbBanner
+        title="Applications"
+      />
+      <ApplicationsPage />
+    </main>
   )
 }
 

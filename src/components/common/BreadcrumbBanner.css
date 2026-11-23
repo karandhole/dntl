@@ -1,0 +1,162 @@
+
+/* =========================================
+   BREADCRUMB HERO
+========================================= */
+
+.breadcrumb-banner {
+    position: relative;
+
+    width: 100%;
+    min-height: 380px;
+
+    display: flex;
+    align-items: flex-end;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 0;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+
+.breadcrumb-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(8, 35, 17, 0.78) 0%,
+        rgba(8, 35, 17, 0.45) 55%,
+        rgba(8, 35, 17, 0.15) 100%
+    );
+
+    z-index: 1;
+}
+
+/* Content */
+
+.breadcrumb-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+    padding: 0 5% 55px;
+
+    /* Space for transparent header */
+    padding-top: 180px;
+}
+
+.breadcrumb-content h1 {
+    color: #ffffff;
+
+    font-family: "Exo 2", sans-serif;
+    font-size: clamp(30px, 4vw, 48px);
+
+    font-weight: 700;
+    text-transform: capitalize;
+
+    margin: 0 0 17px;
+
+    line-height: 1.2;
+}
+
+/* Breadcrumb navigation */
+
+.breadcrumb-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.breadcrumb-home,
+.breadcrumb-item a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-home:hover,
+.breadcrumb-item a:hover {
+    color: #ff8a42;
+}
+
+.breadcrumb-current {
+    color: #ff8a42;
+    font-weight: 600;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .breadcrumb-banner {
+        min-height: 330px;
+    }
+
+    .breadcrumb-container {
+        padding: 125px 5% 40px;
+    }
+
+    .breadcrumb-content h1 {
+        font-size: 34px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .breadcrumb-banner {
+        min-height: 280px;
+        background-position: center;
+    }
+
+    .breadcrumb-container {
+        padding: 110px 5% 30px;
+    }
+
+    .breadcrumb-content h1 {
+        font-size: 27px;
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb-navigation {
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .breadcrumb-item {
+        gap: 6px;
+    }
+
+    .breadcrumb-navigation svg {
+        width: 12px;
+        height: 12px;
+    }
+}

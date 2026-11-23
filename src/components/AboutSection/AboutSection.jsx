@@ -112,12 +112,7 @@ const AboutSection = () => {
                         </div>
                     </div>
 
-                    {/* CTA */}
-                    <a href="/company-profile" className="about-btn">
-                        Discover More
-                        <ArrowUpRight size={18} />
-                    </a>
-
+                   
                 </div>
             </div>
         </section>

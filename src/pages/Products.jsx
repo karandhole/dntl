@@ -1,10 +1,14 @@
 import React from 'react'
 import ProductPage from '../components/Prducts/ProductPage';
+import BreadcrumbBanner from '../components/common/BreadcrumbBanner';
 
 const Products = () => {
   return (
     <main>
-      <ProductPage/>
+      <BreadcrumbBanner
+        title="Products"
+      />
+      <ProductPage />
     </main>
   )
 }

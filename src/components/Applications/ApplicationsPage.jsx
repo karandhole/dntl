@@ -7,7 +7,7 @@ const applications = [
     {
         number: "01",
         title: "Agro Chemicals",
-        image: "/images/applications/agro.jpg",
+        image: "/images/about/chemical-agro.jpg",
         products: [
             "Ortho Cresol",
             "2,6-Xylidine",
@@ -25,7 +25,7 @@ const applications = [
     {
         number: "02",
         title: "Pharma Chemicals",
-        image: "/images/applications/pharma.jpg",
+        image: "/images/about/pharma-chemical.jpg",
         products: [
             "Acetonitrile",
             "2,6-Xylidine",
@@ -42,13 +42,13 @@ const applications = [
       {
         number: "03",
         title: "Epoxy Resins",
-        image: "/images/applications/epoxy.jpg",
+        image: "/images/about/epoxy-resins.jpg",
         products: ["Specialty Bisphenols", "Ortho Cresol"],
     },
     {
         number: "04",
         title: "Antioxidants",
-        image: "/images/applications/antioxidants.jpg",
+        image: "/images/about/Antlioxidants_image.jpg",
         products: [
             "Specialty Bisphenols",
             "Ortho Cresol",
@@ -73,7 +73,7 @@ const ApplicationsPage = () => {
     return (
         <main className="applications-page">
 
-            <section className="applications-hero">
+            {/* <section className="applications-hero">
                 <div className="applications-container">
                     <span className="applications-eyebrow">
                         <span /> INDUSTRIES WE SERVE
@@ -94,7 +94,7 @@ const ApplicationsPage = () => {
                         <strong>06 APPLICATIONS</strong>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="applications-section">
                 <div className="applications-container">
@@ -118,9 +118,7 @@ const ApplicationsPage = () => {
                             >
 
                                 <div className="application-top">
-                                    <span className="application-number">
-                                        {item.number}
-                                    </span>
+                                  
                                     <span className="application-icon">
                                         <Factory size={20} />
                                     </span>

@@ -73,7 +73,7 @@ const CompanyHistory = () => {
                     </div>
 
                     <div className="history-total">
-                        <strong>09</strong>
+                  
                         <span>KEY MILESTONES</span>
                     </div>
                 </div>
@@ -99,9 +99,7 @@ const CompanyHistory = () => {
                                     <p>{item.description}</p>
                                 </div>
 
-                                <span className="history-number">
-                                    0{index + 1}
-                                </span>
+                               
 
                                 <ArrowUpRight
                                     className="history-arrow"
