@@ -86,7 +86,7 @@ const PlantServices = () => {
 
                 <div className="plant-card-top">
                   <span className="plant-card-number">
-                    {service.id}
+                    {/* {service.id} */}
                   </span>
 
                   <span className="plant-card-category">
