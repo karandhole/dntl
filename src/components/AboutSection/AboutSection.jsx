@@ -1,8 +1,33 @@
 
 import { ArrowUpRight, Globe2, Leaf, FlaskConical } from "lucide-react";
 import "./AboutUs.css";
-
+import { useEffect, useRef } from "react";
 const AboutSection = () => {
+
+    const logoRef = useRef(null);
+
+useEffect(() => {
+    const logoSection = logoRef.current;
+
+    if (!logoSection) return;
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                logoSection.classList.add("logos-visible");
+            } else {
+                logoSection.classList.remove("logos-visible");
+            }
+        },
+        {
+            threshold: 0.25
+        }
+    );
+
+    observer.observe(logoSection);
+
+    return () => observer.disconnect();
+}, []);
     return (
         <section className="about-section">
             <div className="about-container">
@@ -94,7 +119,7 @@ const AboutSection = () => {
                     <div className="about-logos">
                         
 
-                        <div className="about-logo-list">
+                        <div className="about-logo-list" ref={logoRef}>
                             <img
                                 src="/images/about/logo02.jpg"
                                 alt="Association Logo 1"
