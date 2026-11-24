@@ -679,7 +679,7 @@
         align-items: center;
         justify-content: space-between;
 
-        padding: 4px 2px;
+        padding: 6px 2px;
 
         background: transparent;
         border: none;
@@ -810,6 +810,6 @@
 
     .mobile-nav-link {
         min-height: 30px;
-        font-size: 15px;
+        font-size: 16px;
     }
 }
