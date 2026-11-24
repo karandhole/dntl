@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -27,10 +33,52 @@ import DeepJyoti from "./pages/DeepJyoti";
 import DeepGyan from "./pages/DeepGyan";
 import DeepKanya from "./pages/DeepKanya";
 
+// Page titles for every route
+const pageTitles = {
+  "/": "Home",
+  "/about-us": "About Us",
+  "/company-profile": "Company Profile",
+  "/vision-mission": "Vision & Mission",
+  "/compliance": "Compliance",
+  "/customers": "Our Customers",
+  "/products": "Our Products",
+  "/certificates": "Certificates",
+  "/gallery": "Gallery",
+  "/sustainability": "Sustainability",
+  "/applications": "Applications",
+  "/life-at-dntl": "Life at DNTL",
+  "/careers": "Careers",
+  "/contact": "Contact Us",
+  "/blog": "Blog",
+  "/csr": "Corporate Social Responsibility",
+  "/csr/deep-samruddhi": "Deep Samruddhi",
+  "/csr/deep-jyoti": "Deep Jyoti",
+  "/csr/deep-gyan": "Deep Gyan",
+  "/csr/deep-kanya": "Deep Kanya",
+  "/products/acetonitrile": "Acetonitrile",
+  "/products/2-6-xylidine": "2,6-Xylidine",
+};
+
+// Automatically update browser tab title
+function PageTitle() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentTitle =
+      pageTitles[location.pathname] || "Deepak Novochem Technologies Limited ";
+
+    document.title = `${currentTitle} | Deepak Novochem Technologies Limited`;
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop/>
+      <PageTitle />
+
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
@@ -50,14 +98,24 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/csr" element={<CSR />} />
-        <Route path="/csr/deep-samruddhi" element={<DeepSamruddhi />} />
+
+        <Route
+          path="/csr/deep-samruddhi"
+          element={<DeepSamruddhi />}
+        />
         <Route path="/csr/deep-jyoti" element={<DeepJyoti />} />
         <Route path="/csr/deep-gyan" element={<DeepGyan />} />
         <Route path="/csr/deep-kanya" element={<DeepKanya />} />
 
         {/* Product Details */}
-        <Route path="/products/acetonitrile" element={<AcetonitrileProduct />} />
-        <Route path="/products/2-6-xylidine" element={<XylidineProduct />} />
+        <Route
+          path="/products/acetonitrile"
+          element={<AcetonitrileProduct />}
+        />
+        <Route
+          path="/products/2-6-xylidine"
+          element={<XylidineProduct />}
+        />
       </Routes>
 
       <Footer />
