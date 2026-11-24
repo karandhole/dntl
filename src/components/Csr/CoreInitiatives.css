@@ -1,3 +1,4 @@
+
 .core-initiatives {
   padding: 90px 30px;
   background: #f7f7f6;
@@ -49,22 +50,27 @@
 
 /* =========================================
    INITIATIVES GRID
+   LARGE SCREEN: TWO COLUMNS
 ========================================= */
 
-.initiatives-grid {
+.core-initiatives .initiatives-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: row;
   gap: 24px;
+  width: 100%;
 }
 
 /* =========================================
    INITIATIVE CARD
 ========================================= */
 
-.initiative-card {
+.core-initiatives .initiative-card {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
+  min-width: 0;
   min-height: 340px;
   overflow: hidden;
   border-radius: 7px;
@@ -79,12 +85,10 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-
   background-image: var(--card-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   transition: transform 700ms cubic-bezier(.2, .7, .2, 1);
 }
 
@@ -92,14 +96,12 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-
   background: linear-gradient(
     90deg,
     rgba(15, 20, 24, 0.76) 0%,
     rgba(15, 20, 24, 0.48) 55%,
     rgba(15, 20, 24, 0.30) 100%
   );
-
   transition: background 350ms ease;
 }
 
@@ -141,11 +143,9 @@
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   transition: all 300ms ease;
 }
 
@@ -173,32 +173,42 @@
 }
 
 /* =========================================
-   TABLET RESPONSIVE
+   TABLET: ONE COLUMN
+   601px - 1024px
 ========================================= */
 
-@media (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .core-initiatives {
     padding: 70px 24px;
   }
 
-  .initiatives-grid {
-    gap: 18px;
+  .core-initiatives .initiatives-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-auto-flow: row !important;
+    gap: 20px;
   }
 
-  .initiative-card {
-    min-height: 290px;
+  .core-initiatives .initiative-card {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 300px;
   }
 
   .initiative-card-content {
-    padding: 35px;
+    padding: 35px 40px;
+  }
+
+  .initiative-card-content h3 {
+    font-size: 28px;
   }
 }
 
 /* =========================================
-   MOBILE RESPONSIVE
+   MOBILE: ONE COLUMN
+   Up to 600px
 ========================================= */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .core-initiatives {
     padding: 50px 16px;
   }
@@ -228,24 +238,17 @@
     line-height: 1.7;
   }
 
-  /* One card per row */
-  .initiatives-grid {
-    grid-template-columns: 1fr;
+  .core-initiatives .initiatives-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 16px;
   }
 
-  /* Reduced mobile card height */
-  .initiative-card {
+  .core-initiatives .initiative-card {
+    grid-column: 1 / -1;
     width: 100%;
     min-height: 220px;
     height: 220px;
     border-radius: 7px;
-  }
-
-  /* Keep the background image visible */
-  .initiative-card::before {
-    background-size: cover;
-    background-position: center;
   }
 
   .initiative-card-content {
@@ -276,9 +279,10 @@
 
 /* =========================================
    EXTRA SMALL MOBILE
+   Up to 350px
 ========================================= */
 
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
   .core-initiatives {
     padding: 40px 12px;
   }
@@ -291,11 +295,11 @@
     font-size: 13px;
   }
 
-  .initiatives-grid {
+  .core-initiatives .initiatives-grid {
     gap: 12px;
   }
 
-  .initiative-card {
+  .core-initiatives .initiative-card {
     min-height: 200px;
     height: 200px;
   }
