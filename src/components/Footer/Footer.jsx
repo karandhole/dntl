@@ -178,11 +178,11 @@ const Footer = () => {
                         Limited. All Rights Reserved.
                     </p>
 
-                    <div className="footer-bottom-links">
+                    {/* <div className="footer-bottom-links">
                         <Link to="/privacy-policy">Privacy Policy</Link>
                         <span></span>
                         <Link to="/terms-and-conditions">Terms & Conditions</Link>
-                    </div>
+                    </div> */}
 
                     {showBackToTop && (
                         <button

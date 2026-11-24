@@ -108,7 +108,7 @@
 }
 
 .about-content h2 {
-    font-size: clamp(30px, 3.2vw, 35px);
+    font-size: clamp(30px, 3.2vw, 45px);
     line-height: 1.2;
     font-weight: 750;
     color: #163b35;
@@ -123,7 +123,7 @@
 
 .about-description {
     color: #181f1d;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.95;
     margin-bottom: 18px;
     text-align: justify;
@@ -159,7 +159,7 @@
 }
 
 .about-feature h4 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     color: #183c35;
     margin: 0 0 5px;
@@ -167,8 +167,8 @@
 
 .about-feature span {
     display: block;
-    font-size: 10px;
-    color: #84908c;
+    font-size: 13px;
+    color: #202524;
     line-height: 1.4;
 }
 
@@ -195,7 +195,7 @@
 
 .about-logo-list img {
     width: auto;
-    max-width: 150px;
+    max-width: 200px;
     height: 150px;
     object-fit: contain;
     filter: grayscale(0%);
@@ -266,12 +266,12 @@
     }
 
     .about-content h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .about-description {
-        font-size: 13px;
-        text-align: left;
+        font-size: 15px;
+        text-align: justify;
     }
 
     .about-features {
@@ -290,7 +290,7 @@
 
 .about-logo-list img {
     width: auto;
-    max-width: 130px;
+    max-width: 200px;
     height: 80px;
     object-fit: contain;
 }
@@ -309,10 +309,7 @@
         padding: 14px;
     }
 
-    .about-logo-list img {
-        max-width: 80px;
-        height: 38px;
-    }
+   
 }
 @media (max-width: 480px) {
     .about-logo-list {
@@ -321,7 +318,7 @@
     }
 
     .about-logo-list img {
-        max-width: 120px;
+        max-width: 200px;
         height: 150px;
     }
 }

@@ -277,7 +277,7 @@ const Contact1 = () => {
                                     <Building2 size={22} />
                                 </div>
 
-                                <span className="contact-office-number">01</span>
+                              
                             </div>
 
                             <span className="contact-office-label">
@@ -307,7 +307,7 @@ const Contact1 = () => {
                                     <Building2 size={22} />
                                 </div>
 
-                                <span className="contact-office-number">02</span>
+                               
                             </div>
 
                             <span className="contact-office-label">
@@ -349,7 +349,7 @@ const Contact1 = () => {
                                     <Building2 size={22} />
                                 </div>
 
-                                <span className="contact-office-number">03</span>
+                               
                             </div>
 
                             <span className="contact-office-label">

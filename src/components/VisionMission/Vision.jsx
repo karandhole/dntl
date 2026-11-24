@@ -42,7 +42,7 @@ const Vision = () => {
               <div className="vm-icon">
                 <Eye size={27} strokeWidth={1.6} />
               </div>
-              <span className="vm-number">01</span>
+            
             </div>
 
             <span className="vm-card-label">OUR VISION</span>
@@ -75,7 +75,7 @@ const Vision = () => {
               <div className="vm-icon">
                 <Target size={27} strokeWidth={1.6} />
               </div>
-              <span className="vm-number">02</span>
+             
             </div>
 
             <span className="vm-card-label">OUR MISSION</span>

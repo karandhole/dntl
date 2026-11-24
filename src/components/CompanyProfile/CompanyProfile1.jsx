@@ -160,7 +160,7 @@ const CompanyProfile1 = () => {
               return (
                 <div className="profile-stat-card" key={item.title}>
                   <div className="profile-stat-top">
-                    <span>0{index + 1}</span>
+                    {/* <span>0{index + 1}</span> */}
                     <Icon size={23} strokeWidth={1.6} />
                   </div>
 
