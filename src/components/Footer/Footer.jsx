@@ -64,30 +64,7 @@ const Footer = () => {
     return (
         <footer className="dntl-footer">
 
-            {/* Top CTA Section */}
-            <div className="footer-cta">
-                <div className="footer-cta-content">
-                    <span className="footer-eyebrow">
-                        <span></span> LET'S CONNECT
-                    </span>
-
-                    <h2>
-                        Building a greener future
-                        <br />
-                        <span>through chemistry.</span>
-                    </h2>
-
-                    {/* <p>
-            Looking for innovative chemical solutions?
-            Let's discuss how we can work together.
-          </p> */}
-                </div>
-
-                <Link to="/contact" className="footer-cta-btn">
-                    Get In Touch
-                    <ArrowUpRight size={20} />
-                </Link>
-            </div>
+           
 
             {/* Main Footer */}
             <div className="footer-main">

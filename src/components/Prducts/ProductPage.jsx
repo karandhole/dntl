@@ -38,29 +38,7 @@ const ProductPage = () => {
   return (
     <main className="products-page">
 
-      {/* Hero */}
-      <section className="products-hero">
-        <div className="products-container">
-          <span className="products-eyebrow">
-            <span /> OUR PRODUCT PORTFOLIO
-          </span>
-
-          <h1>
-            Specialty Chemicals<span>.</span>
-          </h1>
-
-          <p>
-            Explore our range of specialty chemicals,
-            backed by quality, expertise and trusted
-            manufacturing capabilities.
-          </p>
-
-          <div className="products-hero-bottom">
-            <span>PRODUCT CATALOGUE</span>
-            <strong>01 — {String(products.length).padStart(2, "0")}</strong>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Product Catalogue */}
       <section className="products-catalogue">
