@@ -146,8 +146,8 @@
 
 .csr-impact-heading p,
 .csr-initiatives-heading p {
-  color: #758092;
-  font-size: 14px;
+  color: #10151c;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -244,21 +244,21 @@
 
 .csr-card h3 {
   color: #151b45;
-  font-size: 19px;
+  font-size: 22px;
   margin: 0 0 9px;
   letter-spacing: .3px;
 }
 
 .csr-card h4 {
   color: #c05a00;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0 0 13px;
 }
 
 .csr-card-description {
-  color: #778292;
-  font-size: 13px;
+  color: #181a1c;
+  font-size: 14px;
   line-height: 1.7;
   min-height: 66px;
   margin: 0 0 14px;
@@ -274,8 +274,8 @@
   position: relative;
   padding-left: 17px;
   margin-bottom: 11px;
-  color: #606d7c;
-  font-size: 12px;
+  color: #1b232d;
+  font-size: 14px;
   line-height: 1.6;
 }
 

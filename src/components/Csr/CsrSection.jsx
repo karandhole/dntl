@@ -195,7 +195,7 @@ const CsrSection = () => {
                         return (
                             <article className="csr-card" key={item.number}>
                                 <div className="csr-card-top">
-                                    <span className="csr-card-number">{item.number}</span>
+                               
                                     <div className="csr-card-icon">
                                         <Icon size={25} strokeWidth={1.7} />
                                     </div>
