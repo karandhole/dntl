@@ -84,7 +84,7 @@ const MainSlider = () => {
     
 
       {/* Slide Counter */}
-      <div className="slider-counter">
+      {/* <div className="slider-counter">
         <span>
           {String(currentSlide + 1).padStart(2, "0")}
         </span>
@@ -94,7 +94,7 @@ const MainSlider = () => {
         <span>
           {String(slides.length).padStart(2, "0")}
         </span>
-      </div>
+      </div> */}
 
     </section>
   );
