@@ -1,4 +1,3 @@
-
 .core-initiatives {
   padding: 90px 30px;
   background: #f7f7f6;
@@ -9,6 +8,10 @@
   max-width: 1450px;
   margin: 0 auto;
 }
+
+/* =========================================
+   SECTION HEADING
+========================================= */
 
 .core-initiatives-heading {
   text-align: center;
@@ -44,11 +47,19 @@
   margin: 0;
 }
 
+/* =========================================
+   INITIATIVES GRID
+========================================= */
+
 .initiatives-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
+
+/* =========================================
+   INITIATIVE CARD
+========================================= */
 
 .initiative-card {
   position: relative;
@@ -68,10 +79,12 @@
   position: absolute;
   inset: 0;
   z-index: -2;
+
   background-image: var(--card-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   transition: transform 700ms cubic-bezier(.2, .7, .2, 1);
 }
 
@@ -79,12 +92,14 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+
   background: linear-gradient(
     90deg,
     rgba(15, 20, 24, 0.76) 0%,
     rgba(15, 20, 24, 0.48) 55%,
     rgba(15, 20, 24, 0.30) 100%
   );
+
   transition: background 350ms ease;
 }
 
@@ -126,11 +141,17 @@
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   transition: all 300ms ease;
 }
+
+/* =========================================
+   HOVER EFFECTS
+========================================= */
 
 .initiative-card:hover::before {
   transform: scale(1.07);
@@ -151,7 +172,10 @@
   transform: translate(3px, -2px);
 }
 
-/* Tablet */
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
 @media (max-width: 900px) {
   .core-initiatives {
     padding: 70px 24px;
@@ -170,31 +194,136 @@
   }
 }
 
-/* Mobile */
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
 @media (max-width: 600px) {
   .core-initiatives {
-    padding: 60px 18px;
+    padding: 50px 16px;
+  }
+
+  .core-initiatives-container {
+    width: 100%;
   }
 
   .core-initiatives-heading {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 
+  .core-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .core-initiatives-heading h2 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .core-initiatives-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* One card per row */
   .initiatives-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
+  /* Reduced mobile card height */
   .initiative-card {
-    min-height: 260px;
+    width: 100%;
+    min-height: 220px;
+    height: 220px;
+    border-radius: 7px;
+  }
+
+  /* Keep the background image visible */
+  .initiative-card::before {
+    background-size: cover;
+    background-position: center;
   }
 
   .initiative-card-content {
-    padding: 30px;
+    padding: 24px;
+  }
+
+  .initiative-number {
+    font-size: 11px;
+    margin-bottom: 14px;
   }
 
   .initiative-card-content h3 {
-    font-size: 27px;
-    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .initiative-link {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .initiative-arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+  .core-initiatives {
+    padding: 40px 12px;
+  }
+
+  .core-initiatives-heading h2 {
+    font-size: 26px;
+  }
+
+  .core-initiatives-heading p {
+    font-size: 13px;
+  }
+
+  .initiatives-grid {
+    gap: 12px;
+  }
+
+  .initiative-card {
+    min-height: 200px;
+    height: 200px;
+  }
+
+  .initiative-card-content {
+    padding: 20px;
+  }
+
+  .initiative-card-content h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  .initiative-arrow {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .initiative-card::before,
+  .initiative-card-overlay,
+  .initiative-link,
+  .initiative-arrow {
+    transition: none;
   }
 }
