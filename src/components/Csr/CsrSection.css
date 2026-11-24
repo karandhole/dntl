@@ -124,8 +124,8 @@
 }
 
 .csr-commitment-content p {
-  color: #687386;
-  font-size: 14px;
+  color: #0f1012;
+  font-size: 15px;
   line-height: 1.95;
   margin: 0 0 17px;
 }
@@ -179,13 +179,13 @@
 
 .csr-impact-item h3 {
   color: #172b55;
-  font-size: 15px;
+  font-size: 18px;
   margin: 18px 0 9px;
 }
 
 .csr-impact-item p {
-  color: #788291;
-  font-size: 12px;
+  color: #181b1f;
+  font-size: 15px;
   line-height: 1.7;
   margin: 0;
 }
