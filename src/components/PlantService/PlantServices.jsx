@@ -44,7 +44,7 @@ const PlantServices = () => {
             </span>
 
             <h2>
-              Plant & <span>Services</span>
+              Plant & Services
             </h2>
           </div>
 

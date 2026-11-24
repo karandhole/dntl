@@ -63,7 +63,7 @@ const CompanyHistory = () => {
                         </span>
 
                         <h2>
-                            A Journey of <span>Innovation.</span>
+                            A Journey of Innovation.
                         </h2>
 
                         <p>

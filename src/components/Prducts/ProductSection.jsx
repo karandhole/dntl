@@ -42,7 +42,7 @@ const ProductSection = () => {
                         <span className="products-subtitle">OUR PRODUCTS</span>
                         <h2>
                             Specialty Chemicals.
-                            <span> Exceptional Quality.</span>
+                             Exceptional Quality.
                         </h2>
                         <p>
                             Explore our range of high-performance specialty chemicals

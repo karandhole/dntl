@@ -131,7 +131,7 @@ const CompanyStats = () => {
             <h2>
               Innovation That
               <br />
-              <span>Creates Impact.</span>
+              Creates Impact.
             </h2>
 
           </div>
