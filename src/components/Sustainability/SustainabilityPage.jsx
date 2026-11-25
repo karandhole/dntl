@@ -12,8 +12,8 @@ const sustainabilityLogos = [
     image: "/images/about/logo01.jpg",
   },
   {
-    name: "Sustainability Initiative 3",
-    image: "/images/about/logo03.png",
+    name: "ZERO LIQUID DISCHARGE",
+    text: "ZERO LIQUID DISCHARGE",
   },
 ];
 
@@ -41,12 +41,16 @@ const SustainabilityPage = () => {
 
       {/* Sustainability Logos Section */}
       <section className="sustainability-section">
-        
+
 
         <div className="sustainability-logo-grid">
           {sustainabilityLogos.map((logo, index) => (
             <div className="sustainability-logo-card" key={index}>
-              <img src={logo.image} alt={logo.name} />
+              {logo.image ? (
+                <img src={logo.image} alt={logo.name} />
+              ) : (
+                <span className="sustainability-logo-text">{logo.text}</span>
+              )}
             </div>
           ))}
         </div>
@@ -55,9 +59,9 @@ const SustainabilityPage = () => {
       {/* Certifications Section */}
       <section className="certifications-section">
         <div className="certifications-heading">
-          
+
           <h2>Our Certifications</h2>
-        
+
         </div>
 
         <div className="certifications-grid">

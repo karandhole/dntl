@@ -56,29 +56,31 @@
 }
 
 .sustainability-logo-card {
-  height: 175px;
+  height: 330px;
   padding: 25px;
-  background: #ffffff;
-  border: 1px solid #e8edf0;
-  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ff7043;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-.sustainability-logo-card:hover {
-  transform: translateY(-6px);
-  border-color: #0a9d92;
-  box-shadow: 0 12px 30px rgba(18, 48, 65, 0.08);
-}
 
 .sustainability-logo-card img {
   max-width: 100%;
-  max-height: 110px;
+  max-height: 200px;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+.sustainability-logo-text {
+  color: #218b2b;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* Certifications section */
@@ -106,14 +108,14 @@
   color: inherit;
   background: #ffffff;
   border: 1px solid #e5e8eb;
-  border-radius: 10px;
+  border-radius: 4px;
   overflow: hidden;
   transition: all 0.35s ease;
 }
 
 .certification-card:hover {
   transform: translateY(-7px);
-  border-color: #079b91;
+  border-color: #9b4a07;
   box-shadow: 0 16px 35px rgba(18, 48, 65, 0.10);
 }
 
@@ -167,7 +169,7 @@
   min-height: 78px;
   padding: 18px 22px;
   border-top: 1px solid #edf0f2;
-  border-bottom: 3px solid #079b91;
+  border-bottom: 3px solid #d2740f;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -182,7 +184,7 @@
 }
 
 .certificate-link {
-  color: #079b91;
+  color: #9b6207;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.7px;
