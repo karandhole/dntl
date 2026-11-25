@@ -142,7 +142,7 @@
 
 .history-dot {
     position: absolute;
-    top: 13px;
+    top: 25px;
 
     width: 18px;
     height: 18px;
@@ -206,7 +206,7 @@
 .history-card::after {
     content: "";
     position: absolute;
-    top: 13px;
+    top: 25px;
 
     width: 0;
     height: 0;
