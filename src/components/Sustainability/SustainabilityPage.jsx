@@ -41,14 +41,7 @@ const SustainabilityPage = () => {
 
       {/* Sustainability Logos Section */}
       <section className="sustainability-section">
-        <div className="sustainability-heading">
-          
-          <h1>Sustainability</h1>
-          <p>
-            Building a responsible future through sustainable practices,
-            environmental care and continuous improvement.
-          </p>
-        </div>
+        
 
         <div className="sustainability-logo-grid">
           {sustainabilityLogos.map((logo, index) => (
@@ -62,14 +55,9 @@ const SustainabilityPage = () => {
       {/* Certifications Section */}
       <section className="certifications-section">
         <div className="certifications-heading">
-          <span className="sustainability-eyebrow">
-            QUALITY & EXCELLENCE
-          </span>
+          
           <h2>Our Certifications</h2>
-          <p>
-            Our certifications reflect our commitment to quality,
-            environmental responsibility and workplace safety.
-          </p>
+        
         </div>
 
         <div className="certifications-grid">
