@@ -46,13 +46,11 @@ const ProductPage = () => {
 
           <div className="products-heading">
             <div>
-              <span>EXPLORE OUR RANGE</span>
+              
               <h2>Our <em>Products</em></h2>
             </div>
 
-            <p>
-              Quality chemicals. Reliable partnerships.
-            </p>
+          
           </div>
 
           <div className="products-grid">
