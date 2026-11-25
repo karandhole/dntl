@@ -33,10 +33,7 @@ const Customers1 = () => {
         {/* WORLD MAP */}
         <div className="customers-map">
 
-          <div className="customers-map-heading">
-            <span>OUR GLOBAL FOOTPRINT</span>
-            <h3>Across borders. Beyond expectations.</h3>
-          </div>
+          
 
           {/* INTERACTIVE WORLD MAP */}
           <div className="customers-map-visual">
