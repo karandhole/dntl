@@ -66,6 +66,34 @@ export default function CompanyProfile1() {
           </p>
         </div>
 
+        {/* VISION AND MISSION */}
+        <div className="vision-mission-container">
+
+          <div className="vision-box">
+            <h3>Vision</h3>
+            <p>
+              DNTL aims to be the valuable partner to chemical, polymer
+              and life sciences companies worldwide, catering to their
+              specialized outsourcing needs. Our technological solutions
+              in the area of chemistry and chemical engineering in this
+              sphere will be outstanding.
+            </p>
+          </div>
+
+          <div className="mission-box">
+            <h3>Mission</h3>
+            <p>
+              DNTL aims to be an enabler that actively seeks solutions
+              that allow the chemical industry to meet an ever-increasing
+              demand for better products. With superior manufacturing
+              efficiencies and an ingenious R&D team, we will be the
+              preferred partner, instrumental in meeting the chemical
+              industry’s need for innovation.
+            </p>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
