@@ -32,6 +32,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DeepJyoti from "./pages/DeepJyoti";
 import DeepGyan from "./pages/DeepGyan";
 import DeepKanya from "./pages/DeepKanya";
+import NotFound from "./components/NotFound/NotFound";
 
 // Page titles for every route
 const pageTitles = {
@@ -116,6 +117,7 @@ function App() {
           path="/products/2-6-xylidine"
           element={<XylidineProduct />}
         />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
 
       <Footer />

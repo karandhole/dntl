@@ -1,17 +1,8 @@
+
 import React from "react";
-import {
-    MapPin,
-    Phone,
-    Mail,
-    ArrowUpRight,
-    ArrowRight,
-    Factory,
-    ArrowUp,
-} from "lucide-react";
-import { useState, useEffect } from "react";
+import { MapPin, Phone, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-
 
 const productColumns = [
     [
@@ -46,123 +37,72 @@ const productColumns = [
 ];
 
 const Footer = () => {
-    const [showBackToTop, setShowBackToTop] = useState(false);
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setShowBackToTop(window.scrollY > 500);
-        };
-
-        window.addEventListener("scroll", handleScroll, { passive: true });
-
-        handleScroll();
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
     return (
         <footer className="dntl-footer">
-
-           
 
             {/* Main Footer */}
             <div className="footer-main">
                 <div className="footer-container">
 
-                    <div className="footer-grid">
+                    {/* Products Section */}
+                    <div className="footer-products">
 
-                        {/* Company Information */}
-                        <div className="footer-brand">
-                            <Link to="/" className="footer-logo">
-                                <img
-                                    src="/images/logo-bg.png"
-                                    alt="Deepak Novochem Technologies Limited"
-                                />
-                            </Link>
+                        <h3 className="footer-title">
+                            Products
+                        </h3>
 
-                            <p className="footer-brand-description">
-                                Deepak Novochem Technologies Limited develops
-                                technological products based on green chemistries
-                                and alternate technologies.
-                            </p>
-
-                            <div className="footer-brand-tagline">
-                                <Factory size={18} />
-                                <span>Innovation. Chemistry. Sustainability.</span>
-                            </div>
+                        <div className="footer-product-columns">
+                            {productColumns.map((column, index) => (
+                                <ul key={index}>
+                                    {column.map((product) => (
+                                        <li key={product.url}>
+                                            <Link to={product.url}>
+                                                {product.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ))}
                         </div>
 
-                        {/* Products */}
-                        <div className="footer-products">
-                            <div className="footer-heading">
-                                <span className="footer-heading-line"></span>
-                                <h3>Our Products</h3>
-                            </div>
+                    </div>
 
-                            <div className="footer-product-columns">
-                                {productColumns.map((column, index) => (
-                                    <ul key={index}>
-                                        {column.map((product) => (
-                                            <li key={product.url}>
-                                                <Link to={product.url}>
-                                                    <ArrowRight size={13} />
-                                                    {product.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                ))}
-                            </div>
-                        </div>
+                    {/* Contact Information */}
+                    <div className="footer-contact">
 
-                        {/* Contact */}
-                        <div className="footer-contact">
-                            <div className="footer-heading">
-                                <span className="footer-heading-line"></span>
-                                <h3>Contact Information</h3>
+                        <h3 className="footer-title">
+                            Contact Info
+                        </h3>
+
+                        <div className="footer-contact-details">
+
+                            <div className="footer-contact-item">
+                                <MapPin className="footer-icon" size={27} />
+
+                                <p>
+                                    515, 5th Floor, City Point 17,
+                                    <br />
+                                    Boat Club Road,
+                                    <br />
+                                    Pune - 411001, India
+                                </p>
                             </div>
 
                             <div className="footer-contact-item">
-                                <div className="footer-contact-icon">
-                                    <MapPin size={20} />
-                                </div>
+                                <Phone className="footer-icon" size={25} />
 
-                                <div>
-                                    <h4>Our Office</h4>
-                                    <p>
-                                        515, 5th Floor, City Point 17,
-                                        <br />
-                                        Boat Club Road,
-                                        <br />
-                                        Pune - 411001, India
-                                    </p>
-                                </div>
+                                <a href="tel:+912066090200">
+                                    +91 - 20 - 6609 0200
+                                </a>
                             </div>
 
-                            <div className="footer-contact-item">
-                                <div className="footer-contact-icon">
-                                    <Phone size={20} />
-                                </div>
-
-                                <div>
-                                    <h4>Call Us</h4>
-                                    <a href="tel:+912066090200">
-                                        +91 - 20 - 6609 0200
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="footer-contact-item">
-                                <div className="footer-contact-icon">
-                                    <Mail size={20} />
-                                </div>
-
-                                <div>
-                                    <h4>Email Us</h4>
-                                    <Link to="/contact">Send an enquiry</Link>
-                                </div>
-                            </div>
                         </div>
 
                     </div>
@@ -170,35 +110,22 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom Bar */}
+            {/* Copyright Section */}
             <div className="footer-bottom">
-                <div className="footer-bottom-container">
-                    <p>
-                        © {new Date().getFullYear()} Deepak Novochem Technologies
-                        Limited. All Rights Reserved.
-                    </p>
 
-                    {/* <div className="footer-bottom-links">
-                        <Link to="/privacy-policy">Privacy Policy</Link>
-                        <span></span>
-                        <Link to="/terms-and-conditions">Terms & Conditions</Link>
-                    </div> */}
+                <p>
+                    © {new Date().getFullYear()} Deepak Novochem Technologies
+                    Limited. All Rights Reserved.
+                </p>
 
-                    {showBackToTop && (
-                        <button
-                            className="back-to-top-btn"
-                            aria-label="Back to top"
-                            onClick={() => {
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: "smooth",
-                                });
-                            }}
-                        >
-                            <ArrowUp size={23} strokeWidth={2.2} />
-                        </button>
-                    )}
-                </div>
+                <button
+                    className="back-to-top-btn"
+                    onClick={scrollToTop}
+                    aria-label="Back to top"
+                >
+                    <ChevronUp size={18} />
+                </button>
+
             </div>
 
         </footer>
