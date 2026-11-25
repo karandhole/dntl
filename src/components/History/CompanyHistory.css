@@ -322,7 +322,7 @@
     }
 
     .history-card-body h4 {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .history-card-body p {
@@ -414,8 +414,8 @@
     .history-left .history-card-header h3,
     .history-right .history-card-header h3 {
         text-align: left;
-        font-size: 13px;
-        color: #fff;
+        font-size: 14px;
+        color: #020202;
     }
 
     /* Mobile description */
@@ -425,7 +425,7 @@
     }
 
     .history-card-body h4 {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .history-card-body p {
