@@ -1,123 +1,156 @@
 
 import "./CompanyHistory.css";
-import { ArrowUpRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+
 
 const history = [
     {
         year: "2021",
-        title: "New Specialty Bisphenol Plant",
-        description: "Setup of new Specialty Bisphenol Plant for Electric Vehicle Application."
+        title: "Setup of new specialty Bisphenol plant for electric vehicle Application"
     },
     {
         year: "2019",
-        title: "Capacity Expansion",
-        description: "Augmented capacity of existing Specialty Bisphenol Plant."
+        title: "Augmented capacity of existing specialty Bisphenol plant"
     },
     {
         year: "2018",
-        title: "New Dedicated Plant",
-        description: "Setup of a new dedicated Specialty Bisphenol Plant."
+        title: "Setup of new dedicated specialty Bisphenol plant"
     },
     {
         year: "2016",
-        title: "Innovation for 5G",
-        description: "Unique & innovative application developed for 5G based on Specialty Bisphenol."
+        title: "Unique & innovative application developed for 5G application based on specialty Bisphenol"
     },
     {
         year: "2013",
-        title: "Food Packaging Innovation",
-        description: "Unique & innovative application developed for food packaging."
+        title: "Unique & innovative application developed for food packaging based on specialty Bisphenol"
     },
     {
         year: "2010",
-        title: "Six Sigma Accreditation",
-        description: "Six Sigma accreditation for one of the products by a Japanese customer."
+        title: "Six Sigma accreditation for one of the products by the Japanese customer"
     },
     {
         year: "2009",
-        title: "Acetonitrile On Purpose",
-        description: "Globally first company to start Acetonitrile on purpose."
+        title: "Globally First company to start Acetonitrile On Purpose"
     },
     {
         year: "2008",
-        title: "Global Manufacturing Leadership",
-        description: "Positioned as top 2 manufacturer of 2,6-Xylidine worldwide."
+        title: "Positioned as Top 2 Manufacturer of 2,6-Xylidine Worldwide"
     },
     {
         year: "2007",
-        title: "FCCL Assets Acquisition",
-        description: "Takeover of FCCL assets at Lote, Maharashtra."
+        title: "Takeover of FCCL Assets at Lote, Maharashtra"
     }
 ];
 
 const CompanyHistory = () => {
+    const timelineRef = useRef(null);
+
+    useEffect(() => {
+        const items =
+            timelineRef.current?.querySelectorAll(".history-item");
+
+        if (!items?.length) return;
+
+        // Show all items if IntersectionObserver is unsupported
+        if (!("IntersectionObserver" in window)) {
+            items.forEach(item => {
+                item.classList.add("is-visible");
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Play animation when entering viewport
+                        entry.target.classList.add("is-visible");
+                    } else {
+                        // Reset animation when leaving viewport
+                        entry.target.classList.remove("is-visible");
+                    }
+                });
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -20px 0px"
+            }
+        );
+
+        items.forEach(item => observer.observe(item));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <section className="history-section">
-            <div className="history-wrapper">
+        <section className="company-history">
 
-                {/* Header */}
-                <div className="history-header">
-                    <div>
-                        <span className="history-label">
-                            OUR LEGACY
-                        </span>
+            <div className="company-history-container">
 
-                        <h2>
-                            A Journey of Innovation.
-                        </h2>
+                {/* Heading */}
 
-                        <p>
-                            Milestones that define our growth,
-                            expertise and commitment to excellence.
-                        </p>
-                    </div>
-
-                    <div className="history-total">
-                  
-                        <span>KEY MILESTONES</span>
-                    </div>
+                <div className="company-history-heading">
+                    
+                    <h2>COMPANY HISTORY</h2>
+                   
                 </div>
 
                 {/* Timeline */}
-                <div className="history-list">
-                    <div className="history-progress"></div>
+
+                <div
+                    className="history-timeline"
+                    ref={timelineRef}
+                >
+
+                    <div className="history-center-line">
+                        <span className="history-start-dot"></span>
+                    </div>
 
                     {history.map((item, index) => (
-                        <div className="history-row" key={item.year}>
+                        <div
+                            className={`history-item ${
+                                index % 2 === 0
+                                    ? "history-left"
+                                    : "history-right"
+                            }`}
+                            key={item.year}
+                        >
 
-                            <div className="history-year">
-                                {item.year}
-                            </div>
+                            {/* Timeline Point */}
 
-                            <div className="history-marker">
-                                <span></span>
-                            </div>
+                            <div className="history-dot"></div>
 
-                            <div className="history-details">
-                                <div className="history-text">
-                                    <h3>{item.title}</h3>
+                            {/* Milestone Card */}
+
+                            <div className="history-card">
+
+                                <div className="history-card-header">
+                                    <h3>{item.year}</h3>
+                                </div>
+
+                                <div className="history-card-body">
+                                    <h4>{item.title}</h4>
                                     <p>{item.description}</p>
                                 </div>
 
-                               
-
-                                <ArrowUpRight
-                                    className="history-arrow"
-                                    size={18}
-                                />
                             </div>
 
                         </div>
                     ))}
+
+                    <div className="history-end-dot"></div>
+
                 </div>
 
                 {/* Footer */}
-                <div className="history-footer">
+
+                <div className="history-bottom">
                     <span>2007 — PRESENT</span>
                     <span>GROWING THROUGH INNOVATION</span>
                 </div>
 
             </div>
+
         </section>
     );
 };

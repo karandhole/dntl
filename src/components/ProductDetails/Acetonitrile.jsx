@@ -39,7 +39,7 @@ const Acetonitrile = () => {
   return (
     <main className="acetonitrile-page">
       {/* Breadcrumb */}
-      <div className="aceto-breadcrumb">
+      {/* <div className="aceto-breadcrumb">
         <div className="aceto-container">
           <Link to="/">Home</Link>
           <ChevronRight size={14} />
@@ -47,7 +47,7 @@ const Acetonitrile = () => {
           <ChevronRight size={14} />
           <span>Acetonitrile</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Product Hero */}
       <section className="aceto-hero">
