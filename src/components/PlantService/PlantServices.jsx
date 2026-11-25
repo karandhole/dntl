@@ -1,8 +1,7 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Cog,
-  Microscope,
   ArrowUpRight,
   ShieldCheck,
   Leaf,
@@ -17,7 +16,7 @@ const services = [
     description:
       "We encourage outsourcing and contract manufacturing based on our vapour phase reaction technology, offering customized manufacturing services to meet diverse industrial requirements.",
     link: "#",
-    icon: Cog,
+    icon: "/images/services-icon1.jpg",
     label: "CUSTOMIZED MANUFACTURING",
   },
   {
@@ -26,7 +25,7 @@ const services = [
     description:
       "DNTL supports new product development and encourages innovative ideas. We also provide customized products from our existing product range and explore new molecule development.",
     link: "#",
-    icon: Microscope,
+    icon: "/images/services-icon2.jpg",
     label: "INNOVATION & DEVELOPMENT",
   },
 ];
@@ -43,18 +42,20 @@ const PlantServices = () => {
               WHAT WE OFFER
             </span>
 
-            <h2>
-              Plant & Services
-            </h2>
+            <h2>Plant & Services</h2>
           </div>
 
           <div className="plant-heading-right">
             <p>
-          Committed to environmental sustainability and the safety of our people and surrounding communities.
+              Committed to environmental sustainability and
+              the safety of our people and surrounding communities.
             </p>
+
             <div className="plant-commitment">
               <Leaf size={18} />
-              <span>Responsible Manufacturing. Sustainable Future.</span>
+              <span>
+                Responsible Manufacturing. Sustainable Future.
+              </span>
             </div>
           </div>
         </div>
@@ -73,49 +74,61 @@ const PlantServices = () => {
             </p>
           </div>
 
-          <span className="plant-highlight-number">01 / 02</span>
+          <span className="plant-highlight-number">
+            01 / 02
+          </span>
         </div>
 
         {/* Service Cards */}
         <div className="plant-services-grid">
-          {services.map((service) => {
-            const Icon = service.icon;
+          {services.map((service) => (
+            <div
+              className="plant-service-card"
+              key={service.id}
+            >
 
-            return (
-              <div className="plant-service-card" key={service.id}>
+              <div className="plant-card-top">
+                <span className="plant-card-number">
+                  {/* {service.id} */}
+                </span>
 
-                <div className="plant-card-top">
-                  <span className="plant-card-number">
-                    {/* {service.id} */}
-                  </span>
-
-                  <span className="plant-card-category">
-                    {service.label}
-                  </span>
-                </div>
-
-                <div className="plant-service-icon">
-                  <Icon size={34} strokeWidth={1.6} />
-                  <span className="plant-icon-glow"></span>
-                </div>
-
-                <div className="plant-service-content">
-                  <h3>{service.title}</h3>
-
-                  <p>{service.description}</p>
-
-                  <Link to={service.link} className="plant-read-more">
-                    <span>Explore Service</span>
-                    <span className="plant-read-icon">
-                      <ArrowUpRight size={19} />
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="plant-card-decoration"></div>
+                <span className="plant-card-category">
+                  {service.label}
+                </span>
               </div>
-            );
-          })}
+
+              {/* Custom PNG/JPG Icon */}
+              <div className="plant-service-icon">
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="plant-service-img"
+                />
+
+                <span className="plant-icon-glow"></span>
+              </div>
+
+              <div className="plant-service-content">
+                <h3>{service.title}</h3>
+
+                <p>{service.description}</p>
+
+                <Link
+                  to={service.link}
+                  className="plant-read-more"
+                >
+                  <span>Read More</span>
+
+                  <span className="plant-read-icon">
+                    <ArrowUpRight size={19} />
+                  </span>
+                </Link>
+              </div>
+
+              <div className="plant-card-decoration"></div>
+
+            </div>
+          ))}
         </div>
 
       </div>
