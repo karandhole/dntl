@@ -70,13 +70,7 @@
   transform: translateY(-3px);
 }
 
-.careers-hero-image {
-  position: relative;
-  min-height: 490px;
-  background:
-    url("/images/about/career.jpg")
-    center / cover no-repeat;
-}
+
 
 .career-image-overlay {
   position: absolute;
@@ -125,8 +119,8 @@
 }
 
 .careers-intro > p {
-  color: #283344;
-  font-size: 15px;
+  color: #1d2837;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -166,7 +160,7 @@
 }
 
 .career-highlight p {
-  color: #758092;
+  color: #293241;
   font-size: 13px;
   line-height: 1.6;
   margin: 0;

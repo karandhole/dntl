@@ -30,33 +30,7 @@ const CareersMain = () => {
     <main className="careers-page">
 
       {/* Hero Section */}
-      <section className="careers-hero">
-        <div className="careers-hero-content">
-          <span className="career-eyebrow">BUILD YOUR FUTURE WITH DNTL</span>
-          <h1>
-            Grow With Us.
-            <br />
-            <span>Make An Impact.</span>
-          </h1>
-          <p>
-            Be part of a team that believes in innovation, excellence
-            and creating meaningful contributions to the chemical industry.
-          </p>
-
-          <a href="#current-openings" className="career-hero-btn">
-            Explore Opportunities <ArrowUpRight size={18} />
-          </a>
-        </div>
-
-        <div className="careers-hero-image">
-          <div className="career-image-overlay" />
-          <div className="career-image-caption">
-            <span>PEOPLE. PURPOSE. PROGRESS.</span>
-            <h3>Shape the future with DNTL.</h3>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Introduction */}
       <section className="careers-intro">
         <div>

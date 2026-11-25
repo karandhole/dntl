@@ -37,17 +37,7 @@ const Xylidine = () => {
   return (
     <main className="acetonitrile-page">
 
-      {/* Breadcrumb */}
-      <div className="aceto-breadcrumb">
-        <div className="aceto-container">
-          <Link to="/">Home</Link>
-          <ChevronRight size={14} />
-          <Link to="/products">Products</Link>
-          <ChevronRight size={14} />
-          <span>2,6 Xylidine</span>
-        </div>
-      </div>
-
+      
       {/* Product Hero */}
       <section className="aceto-hero">
         <div className="aceto-container aceto-hero-grid">
