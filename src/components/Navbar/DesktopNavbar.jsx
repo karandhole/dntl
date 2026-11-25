@@ -53,7 +53,7 @@ const DesktopNavbar = () => {
                             {item.name}
 
                             {item.children && (
-                                <ChevronDown size={15} />
+                                <ChevronDown size={22} />
                             )}
                         </NavLink>
 
