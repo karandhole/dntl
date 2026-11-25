@@ -340,15 +340,21 @@
     background: rgba(5, 38, 55, 0.55);
   } */
 
-  .slider-container {
-    padding: 70px 7% 70px;
-  }
+.slider-container {
+  padding: 70px 7% 70px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(60px);
+}
   .slide-content h1 {
-    font-size: clamp(32px, 8vw, 45px);
+    font-size: clamp(32px, 8vw, 35px);
     line-height: 1.2;
     letter-spacing: 0.5px;
     margin-bottom: 18px;
+
   }
 
   .slide-content p {
