@@ -241,3 +241,21 @@
   }
 
 }
+
+
+/* COUNTRY TOOLTIP */
+
+.world-map-tooltip {
+  position: absolute;
+  z-index: 20;
+  transform: translate(12px, -120%);
+  padding: 8px 13px;
+  background: #252a30;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}

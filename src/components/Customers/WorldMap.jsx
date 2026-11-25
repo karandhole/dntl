@@ -11,43 +11,47 @@ import {
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-// Export destination countries
 const highlightedCountries = [
-  "840", // United States
-  "756", // Switzerland
-  "826", // United Kingdom
-  "250", // France
-  "276", // Germany
-  "380", // Italy
-  "724", // Spain
-  "528", // Netherlands
-  "056", // Belgium
-  "616", // Poland
-  "752", // Sweden
-  "578", // Norway
-  "356", // India
-  "392", // Japan
-  "410", // South Korea
-  "764", // Thailand
-  "158", // Taiwan
-  "156", // China
-  "076", // Brazil
-  "376", // Israel
+  "840", "756", "826", "250", "276",
+  "380", "724", "528", "056", "616",
+  "752", "578", "356", "392", "410",
+  "764", "158", "156", "076", "376",
 ];
 
 const WorldMap = () => {
   const [zoom, setZoom] = useState(1);
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    name: "",
+    x: 0,
+    y: 0,
+  });
 
-  const zoomIn = () => {
-    setZoom((previous) => Math.min(previous + 0.3, 5));
+  const handleMouseMove = (event, name) => {
+    const rect = event.currentTarget
+      .closest(".world-map-container")
+      .getBoundingClientRect();
+
+    setTooltip({
+      visible: true,
+      name,
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+    });
   };
 
-  const zoomOut = () => {
-    setZoom((previous) => Math.max(previous - 0.3, 1));
+  const hideTooltip = () => {
+    setTooltip((prev) => ({
+      ...prev,
+      visible: false,
+    }));
   };
 
   return (
-    <div className="world-map-container">
+    <div
+      className="world-map-container"
+      onMouseLeave={hideTooltip}
+    >
 
       <ComposableMap
         width={900}
@@ -57,7 +61,6 @@ const WorldMap = () => {
           scale: 145,
           center: [0, 15],
         }}
-        aria-label="World map showing DNTL export destinations"
       >
         <ZoomableGroup
           zoom={zoom}
@@ -73,6 +76,9 @@ const WorldMap = () => {
                 const isHighlighted =
                   highlightedCountries.includes(countryCode);
 
+                const countryName =
+                  geo.properties.name || "Unknown country";
+
                 return (
                   <Geography
                     key={geo.rsmKey}
@@ -80,12 +86,19 @@ const WorldMap = () => {
                     fill={isHighlighted ? "#ff4f0b" : "#dddddd"}
                     stroke="#ffffff"
                     strokeWidth={0.65}
+                    onMouseEnter={(event) =>
+                      handleMouseMove(event, countryName)
+                    }
+                    onMouseMove={(event) =>
+                      handleMouseMove(event, countryName)
+                    }
+                    onMouseLeave={hideTooltip}
                     style={{
                       default: {
                         outline: "none",
                       },
                       hover: {
-                        fill: isHighlighted ? "#e94305" : "#cccccc",
+                        fill: isHighlighted ? "#e94305" : "#bdbdbd",
                         outline: "none",
                         cursor: "pointer",
                       },
@@ -101,12 +114,24 @@ const WorldMap = () => {
         </ZoomableGroup>
       </ComposableMap>
 
+      {/* COUNTRY TOOLTIP */}
+      {tooltip.visible && (
+        <div
+          className="world-map-tooltip"
+          style={{
+            left: tooltip.x,
+            top: tooltip.y,
+          }}
+        >
+          {tooltip.name}
+        </div>
+      )}
+
       {/* ZOOM CONTROLS */}
       <div className="world-map-controls">
-
         <button
           type="button"
-          onClick={zoomIn}
+          onClick={() => setZoom((prev) => Math.min(prev + 0.3, 5))}
           aria-label="Zoom in"
         >
           +
@@ -114,12 +139,11 @@ const WorldMap = () => {
 
         <button
           type="button"
-          onClick={zoomOut}
+          onClick={() => setZoom((prev) => Math.max(prev - 0.3, 1))}
           aria-label="Zoom out"
         >
           −
         </button>
-
       </div>
 
     </div>
