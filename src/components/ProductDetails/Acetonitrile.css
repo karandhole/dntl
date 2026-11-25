@@ -82,8 +82,8 @@
 }
 
 .chemical-structure {
-    width: 110px;
-    height: 55px;
+    width: auto;
+    height: 100%;
     display: block;
 }
 
@@ -407,7 +407,7 @@
     }
 
     .chemical-structure {
-        width: 90px;
+        width: auto;
     }
 
     .product-enquiry-button {
