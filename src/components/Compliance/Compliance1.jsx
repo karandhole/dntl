@@ -40,22 +40,7 @@ const policies = [
 const Compliance1 = () => {
     return (
         <main className="compliance-page">
-            <section className="compliance-hero">
-                <div className="compliance-container">
-                    <span className="compliance-eyebrow">
-                        <ShieldCheck size={16} /> CORPORATE GOVERNANCE
-                    </span>
-
-                    <h1>
-                        Compliance <span>& Policies</span>
-                    </h1>
-
-                    <p>
-                        Our commitment to ethical practices, transparency, quality and
-                        responsible business operations.
-                    </p>
-                </div>
-            </section>
+           
 
             <section className="compliance-content">
                 <div className="compliance-container">
@@ -87,7 +72,7 @@ const Compliance1 = () => {
                                 <h3>{policy.title}</h3>
 
                                 <span className="compliance-pdf">
-                                    PDF <ArrowUpRight size={17} />
+                                  View PDF <ArrowUpRight size={17} />
                                 </span>
                             </a>
                         ))}
