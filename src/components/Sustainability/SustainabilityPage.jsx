@@ -42,9 +42,7 @@ const SustainabilityPage = () => {
       {/* Sustainability Logos Section */}
       <section className="sustainability-section">
         <div className="sustainability-heading">
-          <span className="sustainability-eyebrow">
-            RESPONSIBLE BUSINESS
-          </span>
+          
           <h1>Sustainability</h1>
           <p>
             Building a responsible future through sustainable practices,
