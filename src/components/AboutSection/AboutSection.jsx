@@ -20,7 +20,8 @@ useEffect(() => {
             }
         },
         {
-            threshold: 0.25
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
         }
     );
 
@@ -35,16 +36,16 @@ useEffect(() => {
                 {/* Left Image */}
                 <div className="about-image-wrapper">
                     <img
-                        src="/images/about/about-1.jpg"
+                        src="/images/about/about.jpg"
                         alt="Deepak Novochem Technologies Limited"
                         className="about-main-image"
                     />
 
-                    <div className="about-image-overlay">
+                    {/* <div className="about-image-overlay">
                         <span>Innovation</span>
                         <span className="overlay-dot"></span>
                         <span>Technology</span>
-                    </div>
+                    </div> */}
 
                     
                 </div>
@@ -52,13 +53,13 @@ useEffect(() => {
                 {/* Right Content */}
                 <div className="about-content">
 
-                    <div className="about-subtitle">
+                    {/* <div className="about-subtitle">
                         <span className="about-line"></span>
                         ABOUT OUR COMPANY
-                    </div>
+                    </div> */}
 
                     <h2>
-                        About <span>Deepak Novochem </span>
+                        About Deepak Novochem
                         Technologies Limited
                     </h2>
 

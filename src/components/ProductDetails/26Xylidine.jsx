@@ -1,8 +1,7 @@
 
 import React, { useState } from "react";
 import "./Acetonitrile.css";
-import xylidineImage from "../../../public/images/products/2-6-Xylidine.jpg";
-
+const xylidineImage = '/images/products/2-6-Xylidine.jpg';
 const Xylidine = () => {
   const [showModal, setShowModal] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
