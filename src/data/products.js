@@ -83,80 +83,80 @@ export const products = {
   "tetra-methyl-bisaniline-f": {
     name: "Tetra Methyl Bisaniline F",
     casNo: "4073-98-7",
-    synonyms: "",
+    synonyms: "TMBAF , 4,4′-methylenebis(2,6-xylidine)",
     molecularFormula: "C17H22N2",
-    image: "/images/products/tetra-methyl-bisaniline-f.jpg",
+    image: "/images/products/Tetra-Methyl-Bisaniline-F.jpg",
   },
 
   "tetra-methyl-bisphenol-s": {
     name: "Tetra Methyl Bisphenol S",
     casNo: "13288-70-5",
-    synonyms: "",
+    synonyms: "TMBPS , Bis-(2,6dimethyl-4-hydroxyphenyl)-sulfone",
     molecularFormula: "C16H18O4S",
-    image: "/images/products/tetra-methyl-bisphenol-s.jpg",
+    image: "/images/products/Tetra-Methyl-Bisphenol-S.jpg",
   },
 
   "tetra-methyl-biphenol": {
     name: "Tetra Methyl Biphenol",
     casNo: "2417-04-1",
-    synonyms: "",
+    synonyms: "TMBP , 3,3′,5,5′-Tetramethylbiphenyl-4,4′-diol",
     molecularFormula: "C16H18O2",
-    image: "/images/products/tetra-methyl-biphenol.jpg",
+    image: "/images/products/Tetra-Methyl-Biphenol.jpg",
   },
 
   "bisphenol-e": {
     name: "Bisphenol E",
     casNo: "2081-08-5",
-    synonyms: "",
+    synonyms: "BIS E, 4,4′-Ethylidenebisphenol",
     molecularFormula: "C14H14O2",
-    image: "/images/products/bisphenol-e.jpg",
+    image: "/images/products/Bisphenol-E.jpg",
   },
 
   "bisphenol-z": {
     name: "Bisphenol Z",
     casNo: "843-55-0",
-    synonyms: "",
+    synonyms: "BIS Z, 4,4′-Cyclohexylidenebisphenol",
     molecularFormula: "C18H20O2",
-    image: "/images/products/bisphenol-z.jpg",
+    image: "/images/products/Bisphenol-Z-1.jpg",
   },
 
   "bisphenol-tmc": {
     name: "Bisphenol TMC",
     casNo: "129188-99-4",
-    synonyms: "",
+    synonyms: "BPTMC, 4,4′-(3,3,5-Trimethylcyclohexylidene) bisphenol",
     molecularFormula: "C21H26O2",
-    image: "/images/products/bisphenol-tmc.jpg",
+    image: "/images/products/Bisphenol-TMC.jpg",
   },
 
   "dimethyl-bisphenol-a": {
     name: "Dimethyl Bisphenol A",
     casNo: "79-97-0",
-    synonyms: "",
+    synonyms: "DMBPA, 4,4′-Isopropylidenedi-o-cresol",
     molecularFormula: "C17H20O2",
-    image: "/images/products/dimethyl-bisphenol-a.jpg",
+    image: "/images/products/Dimethtyl-Bisphenol-A.jpg",
   },
 
   "dimethyl-bisphenol-c": {
     name: "Dimethyl Bisphenol C",
     casNo: "2362-14-3",
-    synonyms: "",
+    synonyms: "DMBPC, 4,4′-Cyclohexylidenebis(o-cresol)",
     molecularFormula: "C20H24O2",
-    image: "/images/products/dimethyl-bisphenol-c.jpg",
+    image: "/images/products/Dimethtyl-Bisphenol-C.jpg",
   },
 
   "ortho-cumyl-octylphenol": {
     name: "Ortho cumyl octylphenol",
     casNo: "73936-80-8",
-    synonyms: "",
+    synonyms: "OCOP, 2-cumyl 4-octylphenol",
     molecularFormula: "C23H32O",
-    image: "/images/products/ortho-cumyl-octylphenol.jpg",
+    image: "/images/products/Ortho-cumyl-octylphenol.jpg",
   },
 
   "bisphenol-ap": {
     name: "Bisphenol AP",
     casNo: "1571-75-1",
-    synonyms: "4,4'-(1-Phenylethylidene)bisphenol",
+    synonyms: "4,4′-(1-Phenylethylidene)bisphenol",
     molecularFormula: "C20H18O2",
-    image: "/images/products/bisphenol-ap.jpg",
+    image: "/images/products/Bisphenol-AP.jpg",
   },
 };
