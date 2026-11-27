@@ -1,443 +1,194 @@
-/* =========================================
-   BRAND COLORS
-========================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
-:root {
-  --brand-blue: #0A6D97;
-  /* --brand-green: #5CBA3C; */
-  --brand-yellow: #c05a00;
-  --white: #FFFFFF;
-  --dark-blue: #052637;
-}
-
-/* =========================================
-   MAIN SLIDER
-========================================= */
 
 .main-slider {
   position: relative;
   width: 100%;
-  height: 650px;
+  height: 750px;
   min-height: 550px;
-
   overflow: hidden;
-  background: var(--brand-blue);
-
-  margin-top: 0;
-}
-
-/* Background starts from the top */
-.slider-background {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("/images/banners/Slider1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-
 }
 
-/* =========================================
-   BACKGROUND OVERLAY
-========================================= */
-
+/* Background overlay */
 .slide-overlay {
   position: absolute;
   inset: 0;
-
-  z-index: 2;
-  background-color: rgba(37, 104, 0, 0.4);
-
-  /* background: linear-gradient(
-    90deg,
-    rgba(5, 38, 55, 0.65) 0%,
-    rgba(10, 109, 151, 0.25) 50%,
-    rgba(5, 38, 55, 0.4) 100%
-  ); */
+  background: rgba(37, 104, 0, 0.4);
+  z-index: 1;
 }
 
-/* =========================================
-   CENTERED CONTENT
-========================================= */
-
+/* Slider content container */
 .slider-container {
   position: relative;
   z-index: 2;
-
   width: 100%;
-  max-width: 1440px;
-  height: 100%;
-
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 150px 8% 100px;
-
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
 }
 
-/* .slide-content {
+/* Slide content */
+.slide-content {
   width: 100%;
-  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  color: var(--white);
-
+/* Main title */
+.slide-title {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 850;
+  line-height: 1.2;
   text-align: center;
-} */
-/* =========================================
-   SLOW & SMOOTH POP-OUT ANIMATION
-========================================= */
+  margin: 0;
+  text-transform: uppercase;
+  transform-origin: center center;
+  animation: titleZoomOut 2.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 
-@keyframes textPopOut {
+@keyframes titleZoomOut {
   0% {
-    opacity: 0;
-    transform: scale(0.75) translateY(30px);
-  }
-
-  15% {
-    opacity: 0;
-    transform: scale(0.75) translateY(30px);
-  }
-
-  45% {
     opacity: 1;
-    transform: scale(1.03) translateY(-5px);
-  }
-
-  65% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-
-  85% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scaleX(1.20) scaleY(1.15);
+    letter-spacing: 8px;
   }
 
   100% {
-    opacity: 0;
-    transform: scale(0.85) translateY(-20px);
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: normal;
   }
 }
 
+/* Title disappears before the next one */
 .slide-content {
-  width: 100%;
-  max-width: 1200px;
-
-  color: var(--white);
-  text-align: center;
-
-  animation: textPopOut 5s ease-in-out both;
+  animation: titleDisappear 0.3s ease 4.2s forwards;
 }
 
-/* =========================================
-   MAIN HEADING
-========================================= */
-
-.slide-content h1 {
-  color: #FFFFFF !important;
-  font-size: clamp(40px, 5.5vw, 70px);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: 1.5px;
-  margin: 0 0 25px;
-
-  opacity: 1;
-  visibility: visible;
-
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+@keyframes titleDisappear {
+  to {
+    opacity: 0;
+  }
 }
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
+/* Description */
 .slide-content p {
-  max-width: 700px;
-
-  margin: 0 auto;
-
-  color: rgba(255, 255, 255, 0.95);
-
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.8;
-
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 25px auto 0;
+  animation: descriptionReveal 1s ease 0.5s both;
 }
 
-/* =========================================
-   SLIDER NAVIGATION
-========================================= */
+@keyframes descriptionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
 
-.slider-navigation {
-  position: absolute;
-  z-index: 5;
-
-  bottom: 40px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Previous / Next buttons */
+/* Large screens */
+@media (max-width: 1200px) {
+  .main-slider {
+    height: 600px;
+  }
 
-.slider-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 43px;
-  height: 43px;
-
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-
-  background: transparent;
-  color: var(--white);
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
+  .slide-title {
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+  }
 }
 
-.slider-arrow:hover {
-  background: var(--brand-green);
-  border-color: var(--brand-green);
-  color: var(--white);
-}
-
-.slider-arrow:focus-visible,
-.slider-dot:focus-visible {
-  outline: 2px solid var(--brand-yellow);
-  outline-offset: 4px;
-}
-
-/* =========================================
-   SLIDER DOTS
-========================================= */
-
-.slider-dots {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.slider-dot {
-  width: 9px;
-  height: 9px;
-
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.6);
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-}
-
-.slider-dot.active {
-  width: 28px;
-
-  border-radius: 10px;
-
-  background: var(--brand-yellow);
-}
-
-/* =========================================
-   SLIDE COUNTER
-========================================= */
-
-.slider-counter {
-  position: absolute;
-  z-index: 5;
-
-  right: 8%;
-  bottom: 50px;
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  color: var(--white);
-
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.slider-counter span:first-child {
-  color: var(--brand-yellow);
-  font-size: 20px;
-}
-
-.counter-divider {
-  width: 35px;
-  height: 1px;
-
-  background: rgba(255, 255, 255, 0.7);
-}
-
-/* =========================================
-   TABLET RESPONSIVE
-========================================= */
-
+/* Tablets */
 @media (max-width: 950px) {
   .main-slider {
-    height: 580px;
+    height: 550px;
     min-height: 500px;
   }
 
   .slider-container {
-    padding: 120px 6% 90px;
+    padding: 0 30px;
   }
 
-  .slide-content h1 {
-    font-size: clamp(38px, 6vw, 55px);
+  .slide-title {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
   }
 
   .slide-content p {
-    font-size: 15px;
-  }
-
-  .slider-counter {
-    right: 6%;
+    font-size: 1.1rem;
   }
 }
 
-/* =========================================
-   MOBILE RESPONSIVE - REDUCED SLIDER HEIGHT
-========================================= */
-
+/* Mobile */
 @media (max-width: 600px) {
-
   .main-slider {
-    height: 500px;
-    min-height: 400px;
-    overflow: hidden;
-  }
-
-  .slider-background {
-    background-size: cover;
-    background-position: center left;
-    background-repeat: no-repeat;
-  }
-
-  /* .slide-overlay {
-    background: rgba(5, 38, 55, 0.55);
-  } */
-
-.slider-container {
-  padding: 70px 7% 70px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: translateY(60px);
-}
-  .slide-content h1 {
-    font-size: clamp(32px, 8vw, 35px);
-    line-height: 1.2;
-    letter-spacing: 0.5px;
-    margin-bottom: 18px;
-
-  }
-
-  .slide-content p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .slider-navigation {
-    bottom: 20px;
-    gap: 10px;
-  }
-
-  .slider-arrow {
-    width: 36px;
-    height: 36px;
-  }
-
-  .slider-dot {
-    width: 8px;
-    height: 8px;
-  }
-
-  .slider-dot.active {
-    width: 23px;
-  }
-
-  .slider-counter {
-    bottom: 28px;
-    right: 7%;
-    font-size: 11px;
-    gap: 7px;
-  }
-
-  .slider-counter span:first-child {
-    font-size: 16px;
-  }
-
-  .counter-divider {
-    width: 20px;
-  }
-}
-
-@media (max-width: 350px) {
-
-  .main-slider {
-    height: 350px;
-    min-height: 350px;
+    height: 480px;
+    min-height: 420px;
+    background-position: center;
   }
 
   .slider-container {
-    padding: 60px 6% 65px;
+    padding: 0 20px;
   }
 
-  .slide-content h1 {
-    font-size: 29px;
+  .slide-title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.25;
+    animation-duration: 2.5s;
   }
 
   .slide-content p {
-    font-size: 12px;
-  }
-
-  .slider-arrow {
-    width: 32px;
-    height: 32px;
-  }
-
-  .slider-counter {
-    right: 6%;
-    gap: 5px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 18px;
   }
 }
 
-/* =========================================
-   REDUCED MOTION ACCESSIBILITY
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  .slide-content {
-    animation: none;
+/* Small mobile */
+@media (max-width: 350px) {
+  .main-slider {
+    height: 400px;
+    min-height: 380px;
   }
 
-  .slider-arrow,
-  .slider-dot {
-    transition: none;
+  .slider-container {
+    padding: 0 15px;
+  }
+
+  .slide-title {
+    font-size: 1.8rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .slide-title,
+  .slide-content p {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    letter-spacing: normal;
   }
 }
