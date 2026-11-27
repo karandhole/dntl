@@ -47,10 +47,10 @@
 
 /* Main title */
 .slide-title {
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 850;
+  color: #f8f3f3 !important;
+  -webkit-text-fill-color: #f7f0f0 !important;
+  font-size: 64px;
+  font-weight: 800;
   line-height: 1.2;
   text-align: center;
   margin: 0;

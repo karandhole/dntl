@@ -8,8 +8,12 @@ const slides = [
   { id: 3, title: "Hydrogenation" },
   { id: 4, title: "Condensation" },
   { id: 5, title: "Oxidation" },
+  { id: 6, title: "Ammonolysis" },
+  { id: 7, title: "Ammoxidation" },
+  { id: 8, title: "Ketonization" },
+  { id: 9, title: "Isomerization" },
+  { id: 10, title: "Vapour Phase Catalytic Reaction" },
 ];
-
 const MainSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
