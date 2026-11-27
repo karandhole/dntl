@@ -1,6 +1,8 @@
 
 export const products = {
   acetonitrile: {
+    id: 1,
+    category: "Other Chemicals",
     name: "Acetonitrile",
     casNo: "75-05-8",
     synonyms: "Methyl Cyanide",
@@ -9,6 +11,8 @@ export const products = {
   },
 
   "2-6-xylidine": {
+    id: 2,
+    category: "Other Chemicals",
     name: "2,6 Xylidine",
     casNo: "87-62-7",
     synonyms: "2,6-Dimethylaniline ",
@@ -17,6 +21,8 @@ export const products = {
   },
 
   "ortho-cresol": {
+    id: 3,
+    category: "Other Chemicals",
     name: "Ortho Cresol",
     casNo: "95-48-7",
     synonyms: "2-Methylphenol",
@@ -25,6 +31,8 @@ export const products = {
   },
 
   "2-6-xylenol": {
+    id: 4,
+    category: "Other Chemicals",
     name: "2,6 Xylenol",
     casNo: "576-26-1",
     synonyms: "2,6-Dimethylphenol",
@@ -33,6 +41,8 @@ export const products = {
   },
 
   valeronitrile: {
+    id: 5,
+    category: "Other Chemicals",
     name: "Valeronitrile",
     casNo: "110-59-8",
     synonyms: "Pentanenitrile",
@@ -41,6 +51,8 @@ export const products = {
   },
 
   "methoxy-acetic-acid": {
+    id: 6,
+    category: "Other Chemicals",
     name: "Methoxy Acetic acid",
     casNo: "625-45-6",
     synonyms: "Methoxyethanoic Acid",
@@ -49,6 +61,8 @@ export const products = {
   },
 
   "4-methyl-cyclohexanone": {
+    id: 7,
+    category: "Other Chemicals",
     name: "4 Methyl Cyclohexanone",
     casNo: "589-92-4",
     synonyms: "4-methylcyclohexan-1-one",
@@ -57,6 +71,8 @@ export const products = {
   },
 
   "trans-4-methyl-cyclohexylamine-hydrochloride": {
+    id: 8,
+    category: "Other Chemicals",
     name: "Trans-4 Methyl Cyclohexylamine Hydrochloride",
     casNo: "33483-65-7",
     synonyms: "Trans-4-methylcyclohexan-1-amine",
@@ -65,6 +81,8 @@ export const products = {
   },
 
   "tetra-methyl-bisphenol-f": {
+    id: 9,
+    category: "Specialty Bisphenols",
     name: "Tetra Methyl Bisphenol F",
     casNo: "5384-21-4",
     synonyms: "TMBPF , 4, 4-Methylenebis (2,6 xylenol)",
@@ -73,6 +91,8 @@ export const products = {
   },
 
   "tetra-methyl-bisphenol-a": {
+    id: 10,
+    category: "Specialty Bisphenols",
     name: "Tetra Methyl Bisphenol A",
     casNo: "5613-46-7",
     synonyms: "TMBPA, 4,4'-isopropylidenedi-2,6-xylenol",
@@ -81,6 +101,8 @@ export const products = {
   },
 
   "tetra-methyl-bisaniline-f": {
+    id: 11,
+    category: "Specialty Bisphenols",
     name: "Tetra Methyl Bisaniline F",
     casNo: "4073-98-7",
     synonyms: "TMBAF , 4,4′-methylenebis(2,6-xylidine)",
@@ -89,6 +111,8 @@ export const products = {
   },
 
   "tetra-methyl-bisphenol-s": {
+    id: 12,
+    category: "Specialty Bisphenols",
     name: "Tetra Methyl Bisphenol S",
     casNo: "13288-70-5",
     synonyms: "TMBPS , Bis-(2,6dimethyl-4-hydroxyphenyl)-sulfone",
@@ -97,6 +121,8 @@ export const products = {
   },
 
   "tetra-methyl-biphenol": {
+    id: 13,
+    category: "Specialty Bisphenols",
     name: "Tetra Methyl Biphenol",
     casNo: "2417-04-1",
     synonyms: "TMBP , 3,3′,5,5′-Tetramethylbiphenyl-4,4′-diol",
@@ -105,6 +131,8 @@ export const products = {
   },
 
   "bisphenol-e": {
+    id: 14,
+    category: "Specialty Bisphenols",
     name: "Bisphenol E",
     casNo: "2081-08-5",
     synonyms: "BIS E, 4,4′-Ethylidenebisphenol",
@@ -113,6 +141,8 @@ export const products = {
   },
 
   "bisphenol-z": {
+    id: 15,
+    category: "Specialty Bisphenols",
     name: "Bisphenol Z",
     casNo: "843-55-0",
     synonyms: "BIS Z, 4,4′-Cyclohexylidenebisphenol",
@@ -121,6 +151,8 @@ export const products = {
   },
 
   "bisphenol-tmc": {
+    id: 16,
+    category: "Specialty Bisphenols",
     name: "Bisphenol TMC",
     casNo: "129188-99-4",
     synonyms: "BPTMC, 4,4′-(3,3,5-Trimethylcyclohexylidene) bisphenol",
@@ -129,6 +161,8 @@ export const products = {
   },
 
   "dimethyl-bisphenol-a": {
+    id: 17,
+    category: "Specialty Bisphenols",
     name: "Dimethyl Bisphenol A",
     casNo: "79-97-0",
     synonyms: "DMBPA, 4,4′-Isopropylidenedi-o-cresol",
@@ -137,6 +171,8 @@ export const products = {
   },
 
   "dimethyl-bisphenol-c": {
+    id: 18,
+    category: "Specialty Bisphenols",
     name: "Dimethyl Bisphenol C",
     casNo: "2362-14-3",
     synonyms: "DMBPC, 4,4′-Cyclohexylidenebis(o-cresol)",
@@ -145,6 +181,8 @@ export const products = {
   },
 
   "ortho-cumyl-octylphenol": {
+    id: 19,
+    category: "Specialty Bisphenols",
     name: "Ortho cumyl octylphenol",
     casNo: "73936-80-8",
     synonyms: "OCOP, 2-cumyl 4-octylphenol",
@@ -153,6 +191,8 @@ export const products = {
   },
 
   "bisphenol-ap": {
+    id: 20,
+    category: "Specialty Bisphenols",
     name: "Bisphenol AP",
     casNo: "1571-75-1",
     synonyms: "4,4′-(1-Phenylethylidene)bisphenol",
