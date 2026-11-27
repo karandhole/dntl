@@ -52,9 +52,9 @@ const DesktopNavbar = () => {
                         >
                             {item.name}
 
-                            {item.children && (
+                            {/* {item.children && (
                                 <ChevronDown size={22} />
-                            )}
+                            )} */}
                         </NavLink>
 
                         {item.children && (
@@ -69,7 +69,7 @@ const DesktopNavbar = () => {
                                         }}
                                     >
                                         {child.name}
-                                        <ArrowUpRight size={14} />
+                                        {/* <ArrowUpRight size={14} /> */}
                                     </NavLink>
                                 ))}
                             </div>
