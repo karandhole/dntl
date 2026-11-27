@@ -59,7 +59,7 @@ const ProductPage = () => {
 
                 <div className="product-card-top">
                   <span className="product-number">
-                    {String(index + 1).padStart(2, "0")}
+                    {/* {String(index + 1).padStart(2, "0")} */}
                   </span>
 
                   <span className="product-icon">

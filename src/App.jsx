@@ -8,6 +8,8 @@ import {
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import NotFound from "./components/NotFound/NotFound";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -19,8 +21,6 @@ import CompanyProfile from "./pages/CompanyProfile";
 import VisionMission from "./pages/VisionMission";
 import Compliance from "./pages/Compliance";
 import Customers from "./pages/Customers";
-import AcetonitrileProduct from "./pages/ProductsPage/AcetonitrileProduct";
-import XylidineProduct from "./pages/ProductsPage/XylidineProduct";
 import Products from "./pages/Products";
 import Applications from "./pages/Applications";
 import Sustainability from "./pages/Sustainability";
@@ -28,13 +28,14 @@ import LifeAtDNTL from "./pages/LifeAtDNTL";
 import Careers from "./pages/Careers";
 import CSR from "./pages/CSR";
 import DeepSamruddhi from "./pages/DeepSamruddhi";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import DeepJyoti from "./pages/DeepJyoti";
 import DeepGyan from "./pages/DeepGyan";
 import DeepKanya from "./pages/DeepKanya";
-import NotFound from "./components/NotFound/NotFound";
 
-// Page titles for every route
+import ProductPage from "./pages/ProductPage";
+import { products } from "./data/products";
+
+// Titles for regular pages
 const pageTitles = {
   "/": "Home",
   "/about-us": "About Us",
@@ -56,24 +57,33 @@ const pageTitles = {
   "/csr/deep-jyoti": "Deep Jyoti",
   "/csr/deep-gyan": "Deep Gyan",
   "/csr/deep-kanya": "Deep Kanya",
-  "/products/acetonitrile": "Acetonitrile",
-  "/products/2-6-xylidine": "2,6-Xylidine",
 };
 
-// Automatically update browser tab title
+const companyName = "Deepak Novochem Technologies Limited";
+
+// Automatically update the browser tab title
 function PageTitle() {
   const location = useLocation();
 
   useEffect(() => {
-    const currentTitle =
-      pageTitles[location.pathname] || "Deepak Novochem Technologies Limited ";
+    const pathname = location.pathname;
 
-    document.title = `${currentTitle} | Deepak Novochem Technologies Limited`;
+    let currentTitle = pageTitles[pathname];
+
+    // Get product title dynamically
+    if (pathname.startsWith("/products/")) {
+      const slug = pathname.split("/")[2];
+      currentTitle = products[slug]?.name;
+    }
+
+    document.title = currentTitle
+      ? `${currentTitle} | Deepak Novochem Technologies Limited`
+      : "Page Not Found | Deepak Novochem Technologies Limited";
+
   }, [location.pathname]);
 
   return null;
 }
-
 function App() {
   return (
     <BrowserRouter>
@@ -83,6 +93,7 @@ function App() {
       <Navbar />
 
       <Routes>
+        {/* Main pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/company-profile" element={<CompanyProfile />} />
@@ -98,8 +109,9 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/csr" element={<CSR />} />
 
+        {/* CSR pages */}
+        <Route path="/csr" element={<CSR />} />
         <Route
           path="/csr/deep-samruddhi"
           element={<DeepSamruddhi />}
@@ -108,16 +120,11 @@ function App() {
         <Route path="/csr/deep-gyan" element={<DeepGyan />} />
         <Route path="/csr/deep-kanya" element={<DeepKanya />} />
 
-        {/* Product Details */}
-        <Route
-          path="/products/acetonitrile"
-          element={<AcetonitrileProduct />}
-        />
-        <Route
-          path="/products/2-6-xylidine"
-          element={<XylidineProduct />}
-        />
-        <Route path="*" element={<NotFound/>} />
+        {/* Reusable product details page */}
+        <Route path="/products/:slug" element={<ProductPage />} />
+
+        {/* 404 page */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
