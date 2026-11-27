@@ -83,7 +83,7 @@ const CareersMain = () => {
       <section className="career-openings" id="current-openings">
         <div className="career-section-heading">
           <div>
-            <span className="career-eyebrow">TAKE THE NEXT STEP</span>
+            
             <h2>Career Opportunities</h2>
             <p>Explore our current openings and find your next opportunity.</p>
           </div>
