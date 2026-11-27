@@ -58,6 +58,7 @@ const pageTitles = {
   "/csr/deep-jyoti": "Deep Jyoti",
   "/csr/deep-gyan": "Deep Gyan",
   "/csr/deep-kanya": "Deep Kanya",
+  "/specialty-bisphenols": "specialty bisphenols",
 };
 
 const companyName = "Deepak Novochem Technologies Limited";
