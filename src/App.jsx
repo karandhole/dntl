@@ -34,6 +34,7 @@ import DeepKanya from "./pages/DeepKanya";
 
 import ProductPage from "./pages/ProductPage";
 import { products } from "./data/products";
+import SpecialtyBisphenolsPage from "./pages/SpecialtyBisphenolsPage";
 
 // Titles for regular pages
 const pageTitles = {
@@ -122,6 +123,7 @@ function App() {
 
         {/* Reusable product details page */}
         <Route path="/products/:slug" element={<ProductPage />} />
+        <Route path="/specialty-bisphenols" element={<SpecialtyBisphenolsPage />} />
 
         {/* 404 page */}
         <Route path="*" element={<NotFound />} />

@@ -1,7 +1,17 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, Factory } from "lucide-react";
 import "./Applications.css";
+
+const productPaths = {
+    "Ortho Cresol": "/products/ortho-cresol",
+    "2,6-Xylidine": "/products/2-6-xylidine",
+    "Acetonitrile": "/products/acetonitrile",
+    "2,6 Xylenol": "/products/2-6-xylenol",
+    "4 Methyl Cyclohexanone": "/products/4-methyl-cyclohexanone",
+    "Trans-4 Methyl Cyclohexylamine": "/products/trans-4-methyl-cyclohexylamine-hydrochloride",
+     "Specialty Bisphenols": "/specialty-bisphenols",
+};
 
 const applications = [
     {
@@ -21,7 +31,6 @@ const applications = [
             "Specialty Amines",
         ],
     },
-  
     {
         number: "02",
         title: "Pharma Chemicals",
@@ -39,7 +48,7 @@ const applications = [
             "Specialty Amines",
         ],
     },
-      {
+    {
         number: "03",
         title: "Epoxy Resins",
         image: "/images/about/epoxy-resins.jpg",
@@ -72,37 +81,14 @@ const applications = [
 const ApplicationsPage = () => {
     return (
         <main className="applications-page">
-
-            {/* <section className="applications-hero">
-                <div className="applications-container">
-                    <span className="applications-eyebrow">
-                        <span /> INDUSTRIES WE SERVE
-                    </span>
-
-                    <h1>
-                        Our <em>Applications.</em>
-                    </h1>
-
-                    <p>
-                        Delivering specialty chemical solutions across
-                        diverse industries through quality, innovation
-                        and manufacturing expertise.
-                    </p>
-
-                    <div className="applications-hero-bottom">
-                        <span>INDUSTRY SEGMENTS</span>
-                        <strong>06 APPLICATIONS</strong>
-                    </div>
-                </div>
-            </section> */}
-
             <section className="applications-section">
                 <div className="applications-container">
-
                     <div className="applications-heading">
                         <div>
                             <span>OUR INDUSTRIES</span>
-                            <h2>Where We <em>Make an Impact</em></h2>
+                            <h2>
+                                Where We <em>Make an Impact</em>
+                            </h2>
                         </div>
                         <p>Specialty chemicals for diverse industrial needs.</p>
                     </div>
@@ -116,9 +102,7 @@ const ApplicationsPage = () => {
                                     "--application-image": `url("${item.image}")`,
                                 }}
                             >
-
                                 <div className="application-top">
-                                  
                                     <span className="application-icon">
                                         <Factory size={20} />
                                     </span>
@@ -134,7 +118,15 @@ const ApplicationsPage = () => {
 
                                 <ul>
                                     {item.products.map((product) => (
-                                        <li key={product}>{product}</li>
+                                        <li key={product}>
+                                            {productPaths[product] ? (
+                                                <Link to={productPaths[product]}>
+                                                    {product}
+                                                </Link>
+                                            ) : (
+                                                product
+                                            )}
+                                        </li>
                                     ))}
                                 </ul>
 
@@ -142,7 +134,10 @@ const ApplicationsPage = () => {
                                     <div className="application-custom">
                                         <span>CUSTOM MANUFACTURING</span>
                                         {item.custom.map((product) => (
-                                            <span className="custom-tag" key={product}>
+                                            <span
+                                                className="custom-tag"
+                                                key={product}
+                                            >
                                                 {product}
                                             </span>
                                         ))}
@@ -153,14 +148,11 @@ const ApplicationsPage = () => {
                                     <span>DNTL INDUSTRIES</span>
                                     <ArrowUpRight size={17} />
                                 </div>
-
                             </article>
                         ))}
                     </div>
-
                 </div>
             </section>
-
         </main>
     );
 };
