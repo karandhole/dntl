@@ -118,17 +118,7 @@ const CareersMain = () => {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="career-bottom-cta">
-        <div>
-          <span>YOUR NEXT CHAPTER STARTS HERE</span>
-          <h2>Ready to grow with DNTL?</h2>
-          <p>Explore an opportunity and take the next step in your career.</p>
-        </div>
-        <a href="#current-openings">
-          View Openings <ArrowUpRight size={18} />
-        </a>
-      </section>
+     
 
     </main>
   );
