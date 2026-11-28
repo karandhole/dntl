@@ -129,10 +129,7 @@ const FocusAreas = () => {
               Annual Action <span>Plans.</span>
             </h2>
 
-            <p>
-              Explore our annual action plans and the initiatives
-              outlined for each financial year.
-            </p>
+          
           </div>
 
           <div className="action-plan-grid">
@@ -176,10 +173,7 @@ const FocusAreas = () => {
 
           <div className="action-plan-footer">
             <span className="action-plan-footer-line" />
-            <p>
-              Building stronger communities through
-              planned and purposeful initiatives.
-            </p>
+            
             <span className="action-plan-footer-line" />
           </div>
 

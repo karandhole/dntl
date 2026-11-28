@@ -45,10 +45,10 @@ const Acknowledgments = () => {
 
           <div className="acknowledgments-count">
             <Award size={22} />
-            <div>
+            {/* <div>
               <strong>17</strong>
               <span>ACKNOWLEDGMENTS</span>
-            </div>
+            </div> */}
           </div>
         </div>
 
