@@ -89,9 +89,9 @@
   transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.initiative-box:hover::before {
+/* .initiative-box:hover::before {
   transform: scale(1.10);
-}
+} */
 
 /* Card Hover */
 
@@ -115,8 +115,8 @@
 
   background: linear-gradient(
     to top,
-    rgba(12, 24, 36, 0.96) 0%,
-    rgba(12, 24, 36, 0.65) 40%,
+    rgba(12, 24, 36, 0.525) 0%,
+    rgba(12, 24, 36, 0.447) 40%,
     rgba(12, 24, 36, 0.05) 100%
   );
 
