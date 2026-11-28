@@ -36,7 +36,7 @@ const LabImages = [
     alt: "Student award ceremony"
   },
   {
-    src: "/images/csr/deepgyan/g9.png",
+    src: "/images/csr/deepgyan/g9.jpg",
     alt: "Student award ceremony"
   },
   
