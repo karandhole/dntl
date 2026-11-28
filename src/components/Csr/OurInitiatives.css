@@ -57,10 +57,10 @@
 /* Cards */
 
 .initiative-box {
-  height: 280px;
+  height: 380px;
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 4px;
   cursor: pointer;
   isolation: isolate;
 
@@ -95,10 +95,10 @@
 
 /* Card Hover */
 
-.initiative-box:hover {
+/* .initiative-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(20, 35, 50, 0.20);
-}
+} */
 
 /* Dark Premium Overlay - No Orange Hover */
 
