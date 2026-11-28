@@ -155,6 +155,46 @@ const laptopImages = [
  
 ];
 
+const ScienceLabImages = [
+  {
+    src: "/images/csr/deepgyan/g1.jpg",
+    alt: " education support"
+  },
+  {
+    src: "/images/csr/deepgyan/g2.jpg",
+    alt: "Financial support for students"
+  },
+  {
+    src: "/images/csr/deepgyan/g3.jpg",
+    alt: "Scholarship distribution"
+  },
+  {
+    src: "/images/csr/deepgyan/g4.jpg",
+    alt: " education program"
+  },
+  {
+    src: "/images/csr/deepgyan/g5.jpg",
+    alt: "Student award ceremony"
+  },
+  {
+    src: "/images/csr/deepgyan/g6.jpg",
+    alt: "Student award ceremony"
+  },
+  {
+    src: "/images/csr/deepgyan/g7.jpg",
+    alt: "Student award ceremony"
+  },
+  {
+    src: "/images/csr/deepgyan/g8.jpg",
+    alt: "Student award ceremony"
+  },
+  {
+    src: "/images/csr/deepgyan/g9.jpg",
+    alt: "Student award ceremony"
+  },
+  
+];
+
 function DeepGyan2() {
   return (
     <div>
@@ -170,6 +210,12 @@ function DeepGyan2() {
         title="Provision & Inauguration of Interactive Digital classroom."
         images={laptopImages}
       />
+      {/* third Slider */}
+      <ImageSlider
+        title="Construction of Science Laboratory & lab equipment"
+        images={ScienceLabImages}
+      />
+
 
     </div>
   );
