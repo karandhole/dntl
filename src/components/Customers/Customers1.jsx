@@ -42,7 +42,7 @@ const Customers1 = () => {
 
           {/* MAP CAPTION */}
           <div className="customers-map-caption">
-            <Globe2 size={17} />
+           
            
           </div>
 
