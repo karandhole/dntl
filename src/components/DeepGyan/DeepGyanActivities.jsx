@@ -72,7 +72,7 @@ const DeepGyanActivities = () => {
                   <div className="dga-icon">
                     <Icon size={25} strokeWidth={1.8} />
                   </div>
-                  <span>{item.number}</span>
+                  {/* <span>{item.number}</span> */}
                 </div>
 
                 <h3>{item.title}</h3>

@@ -38,7 +38,7 @@
 
 .dga-heading p {
   color: #1f2b38;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -89,14 +89,14 @@
 
 .dga-card h3 {
   color: #202b36;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.4;
   margin: 0 0 10px;
 }
 
 .dga-card > p {
   color: #212d3b;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.7;
   margin: 0;
 }
@@ -113,7 +113,7 @@
   align-items: center;
   gap: 9px;
   color: #505963;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .dga-amenities svg {
