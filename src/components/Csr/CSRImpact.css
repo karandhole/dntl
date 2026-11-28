@@ -1,154 +1,233 @@
 
+/* ========================================
+   CSR IMPACT SECTION
+======================================== */
+
 .csr-impact-section {
   width: 100%;
-  padding: 75px 6%;
-  background: #ffffff;
+  padding: 60px 20px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .csr-impact-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* Heading */
+/* ========================================
+   CSR IMPACT HEADING
+======================================== */
+
 .csr-impact-heading {
-  text-align: center;
-  max-width: 700px;
+  width: 100%;
+  max-width: 850px;
   margin: 0 auto 45px;
+  text-align: center;
 }
 
 .csr-impact-subtitle {
-  color: #e66b25;
-  font-size: 13px;
+  display: block;
+  margin-bottom: 12px;
+  color: #26004d;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 12px;
-  display: block;
+  text-transform: uppercase;
 }
 
 .csr-impact-heading h2 {
-  color: #173b63;
-  font-size: 36px;
-  font-weight: 700;
+  margin: 0 0 20px;
+  color: #26004d;
+  font-size: 38px;
+  font-weight: 800;
   line-height: 1.3;
-  margin: 0 0 15px;
+  text-transform: uppercase;
 }
 
 .csr-impact-heading p {
-  color: #777;
-  font-size: 15px;
+  max-width: 750px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.7;
-  margin: 0;
 }
 
-/* Impact Cards */
-.csr-impact-grid {
+/* ========================================
+   CSR IMPACT STATISTICS GRID
+   Renamed to avoid CSS conflicts
+======================================== */
+
+.csr-impact-stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 25px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
+/* ========================================
+   CSR IMPACT CARDS
+======================================== */
 
 .csr-impact-card {
-  background: #fff;
-  padding: 38px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 170px;
+  padding: 30px 20px;
+
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-bottom: 1px solid #ff8056;
+
+  box-sizing: border-box;
   text-align: center;
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.045);
-  transition: all 0.3s ease;
+
+  transition: box-shadow 0.3s ease;
 }
 
 .csr-impact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(23, 59, 99, 0.09);
-  border-color: #f2c5aa;
+  box-shadow: 0 5px 18px rgba(38, 0, 77, 0.08);
 }
 
+/* ========================================
+   CSR IMPACT NUMBERS
+======================================== */
+
 .csr-impact-card h3 {
-  color: #103448;
-  font-size: 46px;
-  font-weight: 700;
-  line-height: 1.2;
   margin: 0 0 12px;
+  color: #26004d;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.2;
   font-variant-numeric: tabular-nums;
 }
 
+.csr-impact-card h3 span {
+  display: inline-block;
+}
+
+/* ========================================
+   CSR IMPACT LABELS
+======================================== */
+
 .csr-impact-card p {
-  color: #173b63;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  display: table;
-  padding-bottom: 12px;
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.csr-impact-card p::after {
-  content: "";
-  position: absolute;
-  width: 45px;
-  height: 3px;
-  background: #e66b25;
-  border-radius: 5px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
 
-/* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .csr-impact-section {
-    padding: 60px 5%;
+    padding: 50px 25px;
+  }
+
+  .csr-impact-heading {
+    margin-bottom: 35px;
   }
 
   .csr-impact-heading h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
-  .csr-impact-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px;
+  .csr-impact-stats-grid {
+    gap: 20px;
   }
 
   .csr-impact-card {
-    padding: 30px 15px;
+    min-height: 155px;
+    padding: 25px 15px;
   }
 
   .csr-impact-card h3 {
     font-size: 38px;
   }
+
+  .csr-impact-card p {
+    font-size: 16px;
+  }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 576px) {
   .csr-impact-section {
-    padding: 50px 5%;
+    padding: 40px 15px;
   }
 
   .csr-impact-heading {
     margin-bottom: 30px;
   }
 
+  .csr-impact-subtitle {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
   .csr-impact-heading h2 {
-    font-size: 26px;
+    font-size: 25px;
+    line-height: 1.4;
   }
 
   .csr-impact-heading p {
     font-size: 14px;
+    line-height: 1.6;
   }
 
-  .csr-impact-grid {
-    grid-template-columns: 1fr !important;
-    gap: 15px;
+  .csr-impact-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .csr-impact-card {
+    min-height: 140px;
     padding: 25px 15px;
   }
 
   .csr-impact-card h3 {
-    font-size: 34px;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .csr-impact-card p {
+    font-size: 15px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .csr-impact-section {
+    padding: 30px 12px;
+  }
+
+  .csr-impact-heading h2 {
+    font-size: 22px;
+  }
+
+  .csr-impact-card h3 {
+    font-size: 32px;
   }
 
   .csr-impact-card p {

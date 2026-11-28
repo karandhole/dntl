@@ -20,7 +20,6 @@ const impactData = [
   },
 ];
 
-
 const AnimatedCounter = ({ target, suffix = "+" }) => {
   const [count, setCount] = useState(0);
   const counterRef = useRef(null);
@@ -88,21 +87,16 @@ const CSRImpact = () => {
       <div className="csr-impact-container">
 
         <div className="csr-impact-heading">
-          <span className="csr-impact-subtitle">OUR IMPACT</span>
+          
 
           <h2>
-            Making a Difference,
-            <br />
-            Creating a Better Tomorrow
+           Our CSR Impact at a Glance
           </h2>
 
-          <p>
-            Through our CSR initiatives, we are committed to creating
-            meaningful change and building stronger communities.
-          </p>
+        
         </div>
 
-        <div className="csr-impact-grid">
+        <div className="csr-impact-stats-grid">
           {impactData.map((item, index) => (
             <div className="csr-impact-card" key={index}>
               <h3>
