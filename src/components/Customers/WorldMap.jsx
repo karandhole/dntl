@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 import {
@@ -20,6 +19,8 @@ const highlightedCountries = [
 
 const WorldMap = () => {
   const [zoom, setZoom] = useState(1);
+  const [hoveredCountry, setHoveredCountry] = useState(null);
+
   const [tooltip, setTooltip] = useState({
     visible: false,
     name: "",
@@ -27,20 +28,39 @@ const WorldMap = () => {
     y: 0,
   });
 
-  const handleMouseMove = (event, name) => {
-    const rect = event.currentTarget
-      .closest(".world-map-container")
-      .getBoundingClientRect();
+  const handleCountryEnter = (event, countryCode, countryName) => {
+    setHoveredCountry(countryCode);
+
+    const container = event.currentTarget.closest(".world-map-container");
+    if (!container) return;
+
+    const rect = container.getBoundingClientRect();
 
     setTooltip({
       visible: true,
-      name,
+      name: countryName,
       x: event.clientX - rect.left,
       y: event.clientY - rect.top,
     });
   };
 
-  const hideTooltip = () => {
+  const handleCountryMove = (event, countryName) => {
+    const container = event.currentTarget.closest(".world-map-container");
+    if (!container) return;
+
+    const rect = container.getBoundingClientRect();
+
+    setTooltip((prev) => ({
+      ...prev,
+      visible: true,
+      name: countryName,
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+    }));
+  };
+
+  const handleCountryLeave = () => {
+    setHoveredCountry(null);
     setTooltip((prev) => ({
       ...prev,
       visible: false,
@@ -50,9 +70,8 @@ const WorldMap = () => {
   return (
     <div
       className="world-map-container"
-      onMouseLeave={hideTooltip}
+      onMouseLeave={handleCountryLeave}
     >
-
       <ComposableMap
         width={900}
         height={440}
@@ -72,35 +91,49 @@ const WorldMap = () => {
             {({ geographies }) =>
               geographies.map((geo) => {
                 const countryCode = String(geo.id).padStart(3, "0");
-
                 const isHighlighted =
                   highlightedCountries.includes(countryCode);
 
                 const countryName =
                   geo.properties.name || "Unknown country";
 
+                const isHovered = hoveredCountry === countryCode;
+
+                let countryFill = "#dddddd";
+
+                if (isHighlighted) {
+                  countryFill = isHovered ? "#198754" : "#ff4f0b";
+                }
+
                 return (
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill={isHighlighted ? "#ff4f0b" : "#dddddd"}
+                    fill={countryFill}
                     stroke="#ffffff"
                     strokeWidth={0.65}
-                    onMouseEnter={(event) =>
-                      handleMouseMove(event, countryName)
-                    }
-                    onMouseMove={(event) =>
-                      handleMouseMove(event, countryName)
-                    }
-                    onMouseLeave={hideTooltip}
+                    onMouseEnter={(event) => {
+                      if (isHighlighted) {
+                        handleCountryEnter(
+                          event,
+                          countryCode,
+                          countryName
+                        );
+                      }
+                    }}
+                    onMouseMove={(event) => {
+                      if (isHighlighted) {
+                        handleCountryMove(event, countryName);
+                      }
+                    }}
+                    onMouseLeave={handleCountryLeave}
                     style={{
                       default: {
                         outline: "none",
                       },
                       hover: {
-                        fill: isHighlighted ? "#e94305" : "#bdbdbd",
                         outline: "none",
-                        cursor: "pointer",
+                        cursor: isHighlighted ? "pointer" : "default",
                       },
                       pressed: {
                         outline: "none",
@@ -114,7 +147,6 @@ const WorldMap = () => {
         </ZoomableGroup>
       </ComposableMap>
 
-      {/* COUNTRY TOOLTIP */}
       {tooltip.visible && (
         <div
           className="world-map-tooltip"
@@ -127,11 +159,12 @@ const WorldMap = () => {
         </div>
       )}
 
-      {/* ZOOM CONTROLS */}
       <div className="world-map-controls">
         <button
           type="button"
-          onClick={() => setZoom((prev) => Math.min(prev + 0.3, 5))}
+          onClick={() =>
+            setZoom((prev) => Math.min(prev + 0.3, 5))
+          }
           aria-label="Zoom in"
         >
           +
@@ -139,13 +172,14 @@ const WorldMap = () => {
 
         <button
           type="button"
-          onClick={() => setZoom((prev) => Math.max(prev - 0.3, 1))}
+          onClick={() =>
+            setZoom((prev) => Math.max(prev - 0.3, 1))
+          }
           aria-label="Zoom out"
         >
           −
         </button>
       </div>
-
     </div>
   );
 };

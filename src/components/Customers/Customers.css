@@ -245,6 +245,18 @@
 
 /* COUNTRY TOOLTIP */
 
+.world-map-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.world-map-container > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .world-map-tooltip {
   position: absolute;
   z-index: 20;
