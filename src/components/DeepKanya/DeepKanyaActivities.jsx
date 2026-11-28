@@ -57,7 +57,7 @@ const DeepKanyaActivities = () => {
                   <div className="dka-icon">
                     <Icon size={26} strokeWidth={1.8} />
                   </div>
-                  <span>{item.number}</span>
+               
                 </div>
 
                 <h3>{item.title}</h3>
