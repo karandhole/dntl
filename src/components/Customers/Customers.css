@@ -42,7 +42,7 @@
 .customers-map {
   margin-top: 40px;
   padding: 30px 25px 22px;
-  background: linear-gradient(145deg, #fff9f5, #ffffff);
+  /* background: linear-gradient(145deg, #fff9f5, #ffffff); */
   border: 1px solid #f4eae4;
   border-radius: 14px;
   overflow: hidden;
